@@ -10,7 +10,7 @@
          	$username=$_POST['username'];
             $userpass=md5($_POST['userpass']); 
 
-         	include ("config.php");
+         include ("config.php");
 			include ("class_mysqli.php");
 			$miconexion = new clase_mysqli;
 			$miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -19,7 +19,8 @@
 			if ($list[0]) {
 		         $_SESSION['autentificado'] = TRUE;
 		         $_SESSION['nombre'] = $list[1]." ".$list[2];
-		         $_SESSION['rol'] = $list[4];   
+		         $_SESSION['rol'] = $list[4]; 
+               $_SESSION['site_path']=$site_path;
 		         echo "<script>location.href='../administrator/dashboard.php'</script>";
 			}else{
 				echo '<script>alert("Datos Incorrectos...");</script>';

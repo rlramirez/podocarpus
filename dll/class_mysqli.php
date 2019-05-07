@@ -67,7 +67,7 @@ class clase_mysqli{
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
 			for ($i=0; $i < $this->numcampos(); $i++) { 
-				echo "<td>".$row[$i]."</td>";
+				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "</tr>";
 		}
