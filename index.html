@@ -8,12 +8,14 @@
 	<meta name="author" content="UTPL by @rlramirez">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
 
 </head>
 <body>
 	<header>
+		<section class="top-menu"><button  onclick="myFunction()">REGISTER</button> | <button class="btn-abrir-popup" id="btnpopup">LOGIN</button></section>
 		<h1>Bird Visualizations <span class="slogan">with HTML5 and CSS3</span></h1>
 		<nav>
 			<a href="" class="menuinicio">Home</a>
@@ -27,6 +29,20 @@
 			<a href="#contacts" class="menufin">Actividades</a>
 		</nav>
 	</header>
+	<div class="overlay" id="overlay">
+		<div class="popup" id="popup">
+			<a href="" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+			<h3>LOGIN TO ADMIN</h3>
+			<h4>To admin de data</h4>
+			<form method="post" action="dll/validar.php">
+				<div class="contenedor-inputs">
+					<input type="text" name="username" placeholder="Username">
+					<input type="password" name="userpass" placeholder="Password">
+				</div>
+				<input type="submit" class="btn-submit" value="Login">
+			</form>
+		</div>
+	</div>
 <main>
 	<section class="servicios">
 		<a name="service"></a>
@@ -77,5 +93,6 @@
 <footer>
 	<h6>Creative Commons by @Ingeniería Web</h6>
 </footer>
+<script src="js/anime.js"></script>
 </body>
 </html>
