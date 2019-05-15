@@ -26,14 +26,20 @@ include("security/security.php");
 	</header>
 	<nav class="mainmenu">
 		<a href="dashboard.php">Dashboard</a>
-		<a href="">Aves</a>
+		<a href="adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
-		<a href="">Servicios</a>
+		<a href="adm_services/index.php">Servicios</a>
 		<a href="">Lugares</a>
 		<a href="">Personal</a>
+<<<<<<< HEAD
 		<a href="">Visitas</a>
 		<a href="adm_activities/adm_sensores.php">Sensores</a>
 		<a href="adm_activities/index.php">Actividades</a>
+=======
+		<a href="adm_visitas/index.php">Visitas</a>
+		<a href="">Sensores</a>
+		<a href="">Actividades</a>
+>>>>>>> 2ba7ecf3b7968703c672c442d55dd9cf9c1e2ec1
 	</nav>
 	<main>
 		<section class="box-dashboard c1">
