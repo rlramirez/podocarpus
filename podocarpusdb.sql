@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `podocarpusdb`
 --
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `aves`
+--
+
+CREATE TABLE `aves` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `nombre_c` varchar(150) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `habitat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `aves`
+--
+
+INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
+(1, 'Águila', 'Aquila chrysaetos', 'Águila es el nombre dado a las mayores aves depredadoras. Las diversas especies y subespecies de águilas pueden encontrarse en casi cualquier parte del mundo excepto en la Antártida. Son miembros de las aves de presa, del orden de Accipitriformes, (o Falconiformes acorde a una clasificación anterior), familia Accipitridae, subfamilia Buteoninae.', 'Zona montañosa con bosques');
 
 -- --------------------------------------------------------
 
@@ -58,6 +78,13 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+
+--
+-- AUTO_INCREMENT de la tabla `aves`
+--
+ALTER TABLE `aves`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

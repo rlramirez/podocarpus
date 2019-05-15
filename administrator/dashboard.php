@@ -26,7 +26,7 @@ include("security/security.php");
 	</header>
 	<nav class="mainmenu">
 		<a href="dashboard.php">Dashboard</a>
-		<a href="">Aves</a>
+		<a href="adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
 		<a href="">Servicios</a>
 		<a href="">Lugares</a>
