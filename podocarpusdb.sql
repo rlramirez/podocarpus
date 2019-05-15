@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `podocarpusdb`
 --
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `aves`
+--
+
+CREATE TABLE `aves` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `nombre_c` varchar(150) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `habitat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `aves`
+--
+
+INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
+(1, 'Águila', 'Aquila chrysaetos', 'Águila es el nombre dado a las mayores aves depredadoras. Las diversas especies y subespecies de águilas pueden encontrarse en casi cualquier parte del mundo excepto en la Antártida. Son miembros de las aves de presa, del orden de Accipitriformes, (o Falconiformes acorde a una clasificación anterior), familia Accipitridae, subfamilia Buteoninae.', 'Zona montañosa con bosques');
 
 -- --------------------------------------------------------
 
@@ -37,6 +57,9 @@ CREATE TABLE `usuarios` (
   `user` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -59,6 +82,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+
+--
+-- AUTO_INCREMENT de la tabla `aves`
+--
+ALTER TABLE `aves`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
@@ -69,3 +99,48 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--Estructura de tabla para la tabla 'servicios'
+
+CREATE TABLE `servicios` (
+  `id` int(11) NOT NULL,
+  `nom_servicio` varchar(100) NOT NULL,
+  `fecha_ini_tem` varchar(100) NOT NULL,
+  `fecha_fin_tem` varchar(50) NOT NULL,
+  `capacidad` int(11) NOT NULL,
+  `responsable` varchar(50) NOT NULL,
+  `informacion` varchar(100) NOT NULL,
+  `galeria` varchar(100) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+  INSERT INTO `servicios` (`id`, `nom_servicio`, `fecha_ini_tem`, `fecha_fin_tem`, `capacidad`, `responsable`, `informacion`, `galeria`) VALUES
+(null, 'camping', '1 de enero', '31 de diciembre', 15, 'pedro', 'Localidad: San Sebastián,Barrio/Sector: Cajanuma,Atractivo Turístico: Bosque Nublado','pendiente');
+
+
+--Estructura de tabla para la tabla 'Noticias'
+
+CREATE TABLE `categoria` (
+  `idCategoria` int(11) NOT NULL AUTO_INCREMENT,
+  `categoria` varchar(45) NOT NULL,
+  PRIMARY KEY (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `noticia` (
+  `idNoticia` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `autor` varchar(45) NOT NULL,
+  `imagen` varchar(200) NOT NULL,
+  `descripcion` varchar(225) NOT NULL,
+  `contenido` varchar(5000) NOT NULL,
+  `idCategoria` int(11) NOT NULL,
+  PRIMARY KEY (`idNoticia`),
+  KEY `id_categoria_idx` (`idCategoria`),
+  CONSTRAINT `id_categoria` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`idCategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
