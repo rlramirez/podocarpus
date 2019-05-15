@@ -38,6 +38,9 @@ CREATE TABLE `usuarios` (
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+
+
 --
 -- Volcado de datos para la tabla `usuarios`
 --
@@ -69,3 +72,26 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--Estructura de tabla para la tabla 'servicios'
+
+CREATE TABLE `servicios` (
+  `id` int(11) NOT NULL,
+  `nom_servicio` varchar(100) NOT NULL,
+  `fecha_ini_tem` varchar(100) NOT NULL,
+  `fecha_fin_tem` varchar(50) NOT NULL,
+  `capacidad` int(11) NOT NULL,
+  `responsable` varchar(50) NOT NULL,
+  `informacion` varchar(100) NOT NULL,
+  `galeria` varchar(100) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+  INSERT INTO `servicios` (`id`, `nom_servicio`, `fecha_ini_tem`, `fecha_fin_tem`, `capacidad`, `responsable`, `informacion`, `galeria`) VALUES
+(null, 'camping', '1 de enero', '31 de diciembre', 15, 'pedro', 'Localidad: San Sebastián,Barrio/Sector: Cajanuma,Atractivo Turístico: Bosque Nublado','pendiente');
+
+
+
