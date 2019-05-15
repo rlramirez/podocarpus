@@ -28,12 +28,12 @@ include("security/security.php");
 		<a href="dashboard.php">Dashboard</a>
 		<a href="adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
-		<a href="">Servicios</a>
+		<a href="adm_services/index.php">Servicios</a>
 		<a href="">Lugares</a>
 		<a href="">Personal</a>
-		<a href="">Visitas</a>
+		<a href="adm_visitas/index.php">Visitas</a>
 		<a href="">Sensores</a>
-		<a href="adm_activities/index.php">Actividades</a>
+		<a href="">Actividades</a>
 	</nav>
 	<main>
 		<section class="box-dashboard c1">
