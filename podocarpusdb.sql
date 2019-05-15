@@ -94,4 +94,26 @@ ALTER TABLE `usuarios`
 (null, 'camping', '1 de enero', '31 de diciembre', 15, 'pedro', 'Localidad: San Sebastián,Barrio/Sector: Cajanuma,Atractivo Turístico: Bosque Nublado','pendiente');
 
 
+--Estructura de tabla para la tabla 'Noticias'
+
+CREATE TABLE `categoria` (
+  `idCategoria` int(11) NOT NULL AUTO_INCREMENT,
+  `categoria` varchar(45) NOT NULL,
+  PRIMARY KEY (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `noticia` (
+  `idNoticia` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `autor` varchar(45) NOT NULL,
+  `imagen` varchar(200) NOT NULL,
+  `descripcion` varchar(225) NOT NULL,
+  `contenido` varchar(5000) NOT NULL,
+  `idCategoria` int(11) NOT NULL,
+  PRIMARY KEY (`idNoticia`),
+  KEY `id_categoria_idx` (`idCategoria`),
+  CONSTRAINT `id_categoria` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`idCategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
