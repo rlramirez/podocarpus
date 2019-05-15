@@ -28,7 +28,7 @@ include("security/security.php");
 		<a href="dashboard.php">Dashboard</a>
 		<a href="">Aves</a>
 		<a href="">Noticias</a>
-		<a href="">Servicios</a>
+		<a href="adm_services/index.php">Servicios</a>
 		<a href="">Lugares</a>
 		<a href="">Personal</a>
 		<a href="adm_visitas/index.php">Visitas</a>
