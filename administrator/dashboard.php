@@ -31,9 +31,9 @@ include("security/security.php");
 		<a href="">Servicios</a>
 		<a href="">Lugares</a>
 		<a href="">Personal</a>
-		<a href="">Visitas</a>
+		<a href="adm_visitas/index.php">Visitas</a>
 		<a href="">Sensores</a>
-		<a href="adm_activities/index.php">Actividades</a>
+		<a href="">Actividades</a>
 	</nav>
 	<main>
 		<section class="box-dashboard c1">
