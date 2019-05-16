@@ -108,6 +108,83 @@ main{
 .c6{ background: #C201C9;}
 .c7{ background: #00A94A;}
 .c8{ background: #95B200;}
+
+.modulo-servicios, .area_trabajo{
+	display: inline-block;
+	vertical-align: top;
+}
+.modulo-servicios{
+	width: 20%;
+	background: #CDAB00;
+}
+.area_trabajo{
+	width: 75%;
+	background: #DAD8D8;
+}
+.nav_modulo, .contenido_mod{
+	padding: 1em;
+}
+.nav_modulo a{
+	background: #092445;
+	padding: 1em;
+	color: #FFE251;
+	width: 90%;
+	display: block;
+	text-decoration: none;
+	margin-bottom: -0.5em;
+}
+.nav_modulo a:hover{
+	background: #7E96B3;
+	color: #FFE251;
+}
+.tablecud {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tablecud td, .tablecud th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tablecud tr:nth-child(even){background-color: #f2f2f2;}
+
+.tablecud tr:hover {background-color: #ddd;}
+
+.tablecud th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  text-transform: uppercase;
+}
+form .contenedor-inputs input, select{
+	width: 70%;
+	margin-bottom: 20px;
+	height: 52px;
+	line-height: 52px;
+	font-size: 18px;
+	text-align: center;
+	border:1px solid #bbb;
+	border-radius: 6px;
+}
+form .btn-submit{
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border:none;
+	color: #fff;
+	background: #5e7de3;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+form .btn-submit:hover{
+	background: rgba(94,125,227,.8);
+}
 footer{
 	background: #FFECAA;
 	color: #666;

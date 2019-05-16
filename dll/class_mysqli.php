@@ -74,22 +74,22 @@ class clase_mysqli{
 		echo "</table>";
 	}
 	function verconsulta_crud(){
-		echo "<table border=1>";
+		echo "<table class='tablecud'>";
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";
-			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
-		echo  "<td>Actualizar</td>";
-		echo  "<td>Borrar</td>";
+		echo  "<th>Actualizar</th>";
+		echo  "<th>Borrar</th>";
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
 			for ($i=0; $i < $this->numcampos(); $i++) { 
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
-			echo "<td><a href='actualizar.php?id=$row[0]'>Actualizar</a></td>";
-			echo "<td><a href='borrar.php?idr=$row[0]'>Borrar</a></td>";
+			echo "<td><a href='actualizar.php?id=$row[0]'><i class='fas fa-edit'></i></a></td>";
+			echo "<td><a href='borrar.php?idr=$row[0]'><i class='fas fa-trash-alt'></i></a></td>";
 			echo "</tr>";
 		}
 		echo "</table>";

@@ -3,14 +3,18 @@
 ?>
 <main>
 	<section class="modulo-servicios">
-		<a href="">+ Servicios</a><br>
-		<a href="">Crud</a>
+		<nav class="nav_modulo">
+			<a href="nuevo.php"><i class="fas fa-user-plus"></i> Usuario</a><br>
+			<a href="index.php"><i class="fas fa-user-cog"></i> Crud</a>
+		</nav>
 	</section>
 	<section class="area_trabajo">
-	<?php
-		$miconexion->consulta("select id, nombre,apellido,correo,rol,user from usuarios");
-		$miconexion->verconsulta_crud();
-	?>
+		<section class="contenido_mod">
+			<?php
+				$miconexion->consulta("select id, nombre,apellido,correo,rol,user from usuarios");
+				$miconexion->verconsulta_crud();
+			?>
+		</section>
 	</section>
 	
 </main>
