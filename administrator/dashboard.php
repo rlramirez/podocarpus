@@ -30,13 +30,13 @@ include("security/security.php");
 		<a href="">Noticias</a>
 		<a href="./adm_services/index.php">Servicios</a>
 		<a href="">Lugares</a>
-		<a href="">Personal</a>
+		<a href="./adm_staff/index.php">Personal</a>
 		<a href="./adm_visitas/index.php">Visitas</a>
 		<a href="./adm_activities/adm_sensores.php">Sensores</a>
 		<a href="./adm_activities/index.php">Actividades</a>
 	</nav>
 	<main>
-		<section class="box-dashboard c1">
+		<section class="box-dashboard c1" >
 			<h3>Aves</h3>
 			<p>+ 230 aves</p>
 		</section>
@@ -52,7 +52,7 @@ include("security/security.php");
 			<h3>Lugares</h3>
 			<p>+ 21 Lugares</p>
 		</section>
-		<section class="box-dashboard c5">
+		<section class="box-dashboard c5" href="./adm_staff/index.php">
 			<h3>Personal</h3>
 			<p>+ 11 Personal</p>
 		</section>
