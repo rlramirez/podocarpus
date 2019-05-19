@@ -160,7 +160,7 @@ COMMIT;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sector` (
   `idSector` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `nombre` VARCHAR(65) NULL,
+  `nombre` VARCHAR(65) NULL
   )
 ENGINE = InnoDB;
 
@@ -196,42 +196,15 @@ CREATE TABLE IF NOT EXISTS `fotos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
-
-
----------------------------------------------------------
------ INSERTS
----------------------------------------------------------
-
-
--- sector
--- -----------------------------------------------------
-START TRANSACTION;
-USE `podocarpusdb`;
 INSERT INTO `sector` (`idSector`, `nombre`) VALUES (1, 'Bombuscaro');
 INSERT INTO `sector` (`idSector`, `nombre`) VALUES (2, 'Romerillos');
 INSERT INTO `sector` (`idSector`, `nombre`) VALUES (3, 'Zona alta');
-COMMIT;
-
--- -----------------------------------------------------
--- lugares
--- -----------------------------------------------------
-START TRANSACTION;
-USE `podocarpusdb`;
 INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitud`, `descripcion`, `id_sector`) VALUES (1, 'Lagunas de los Compadres', -4.163348, -79.1108917, 'Constituyen uno de los principales atractivos turísticos del parque. Es un sitio muy recomendado para los que gustan de la pesca deportiva y la aventura. La mejor época para visitar este sector es el mes de noviembre, cuando se puede acampar en sus orillas y recorrer los alrededores. Con algo de suerte es posible observar algunas especies relativamente comunes del sector, como el tapir de montaña o el lobo de páramo.', 1);
-COMMIT;
 
 -- -----------------------------------------------------
 -- fotos`
 -- -----------------------------------------------------
-START TRANSACTION;
-USE `podocarpusdb`;
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
-COMMIT;
-
-
-
-
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
