@@ -254,7 +254,7 @@ h2{
 	text-transform: uppercase;
 	font-family: 'Josefin Slab';
 }
-.servicios, .database, .tipos, .contactos{
+.servicios, .lugares, .database, .tipos, .contactos{
 	padding: 14em 1em;
 }
 .serviciodetalle, .tipodetalle{
