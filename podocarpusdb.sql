@@ -198,7 +198,9 @@ ENGINE = InnoDB;
 
 INSERT INTO `sector` (`idSector`, `nombre`) VALUES (1, 'Bombuscaro');
 INSERT INTO `sector` (`idSector`, `nombre`) VALUES (2, 'Romerillos');
-INSERT INTO `sector` (`idSector`, `nombre`) VALUES (3, 'Zona alta');
+INSERT INTO `sector` (`idSector`, `nombre`) VALUES (3, 'Zona Alta');
+INSERT INTO `sector` (`idSector`, `nombre`) VALUES (4, 'Zona Baja')
+
 INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitud`, `descripcion`, `id_sector`) VALUES (1, 'Lagunas de los Compadres', -4.163348, -79.1108917, 'Constituyen uno de los principales atractivos turísticos del parque. Es un sitio muy recomendado para los que gustan de la pesca deportiva y la aventura. La mejor época para visitar este sector es el mes de noviembre, cuando se puede acampar en sus orillas y recorrer los alrededores. Con algo de suerte es posible observar algunas especies relativamente comunes del sector, como el tapir de montaña o el lobo de páramo.', 1);
 
 -- -----------------------------------------------------
