@@ -29,7 +29,7 @@ include("security/security.php");
 		<a href="./adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
 		<a href="./adm_services/index.php">Servicios</a>
-		<a href="">Lugares</a>
+		<a href="./adm_lugares/index.php">Lugares</a>
 		<a href="./adm_staff/index.php">Personal</a>
 		<a href="./adm_visitas/index.php">Visitas</a>
 		<a href="./adm_activities/adm_sensores.php">Sensores</a>
@@ -49,8 +49,8 @@ include("security/security.php");
 			<p>+ 3 Servicios</p>
 		</section>
 		<section class="box-dashboard c4">
-			<h3>Lugares</h3>
-			<p>+ 21 Lugares</p>
+			<h3><a href="./adm_lugares/index.php"><i class="fas fa-tree"></i> Lugares</a></h3>
+			<p>+ 10 Lugares</p>
 		</section>
 		<section class="box-dashboard c5" href="./adm_staff/index.php">
 			<h3>Personal</h3>

@@ -73,6 +73,7 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
+
 	function verconsulta_crud(){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
