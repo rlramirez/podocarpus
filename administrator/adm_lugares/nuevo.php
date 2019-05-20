@@ -31,7 +31,7 @@
 
 					<hr>
 					<span>Subir Imagen</span>
-					<input type="file" name="uploadedFile">
+					<input type="file" name="imagen">
 				</div>
 				<hr>
 				<input type="submit" class="btn-submit" value="Guardar">
