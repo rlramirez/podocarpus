@@ -126,4 +126,3 @@ class clase_mysqli{
 		}
 	}
 }
-?>
