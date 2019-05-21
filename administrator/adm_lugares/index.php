@@ -13,10 +13,9 @@ include('../adm_header.php');
 		<div class="contenido_mod">
 			<?php
 
-			$miconexion->consulta("SELECT l.idLugares ID, l.nombre Nombre_Lugar, l.latitud Latitud, l.longitud Longitud,l.descripcion Descripcion, s.nombre Sector, f.url Imagen 
-			FROM lugares AS l, sector AS s, fotos AS f 
-			WHERE s.idSector = l.idLugares 
-			AND l.idLugares = f.idFotos");
+			$miconexion->consulta("SELECT l.idLugares ID, l.nombre Nombre_Lugar, l.latitud Latitud, l.longitud Longitud,l.descripcion Descripcion, s.nombre Sector, f.url Imagen FROM lugares l JOIN sector s ON l.id_sector = s.idSector JOIN fotos f ON l.idLugares = f.id_lugares");
+			$miconexion->consulta("SELECT l.idLugares ID, l.nombre Nombre_Lugar, l.latitud Latitud, l.longitud Longitud,l.descripcion Descripcion, s.nombre Sector, f.url Imagen FROM lugares l JOIN sector s ON l.id_sector = s.idSector JOIN fotos f ON l.idLugares = f.id_lugares");
+
 			$miconexion->verconsulta_crud();
 			?>
 		</div>
