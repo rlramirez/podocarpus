@@ -1,5 +1,10 @@
 <?php
+	extract($_GET);
 	include('../adm_header.php');
+	$id_lugar = $miconexion->consulta("SELECT * FROM lugares WHERE idLugares=$id");
+	$id_foto = $miconexion->consultaID("SELECT idFotos FROM fotos WHERE id_lugares = $id_lugar");
+	$lista_l=$miconexion->consulta_lista();
+	echo $id_foto
 ?>
 <main>
 	<section class="modulo-servicios">
@@ -8,14 +13,14 @@
 			<a href="index.php"><i class="fas fa-user-cog"></i> Listar</a>
 		</nav>
     </section>
-    <section class="area_trabajo">
+	<section class="area_trabajo">
 		<section class="contenido_mod">
-			<h2>REGISTRO</h2>
+			<h2>EDITAR</h2>
 			<hr>
-			<h3>Nuevo Lugar</h3>
 			<!-- Metodo post para guardar formulario -->
-			<form method="post" action="nuevo_lugar.php" enctype="multipart/form-data">
+			<form method="post" action="update.php" enctype="multipart/form-data">
 				<div class="contenedor-inputs">
+					<input type="hidden" name="id_l" value="<?php $lista_l[0];?>">
 					<input type="text" name="nombre" placeholder="Nombre">
 					<input type="text" name="latitud" placeholder="Latitud" required="required">
 					<input type="text" name="longitud" placeholder="Longitud" required="required">
@@ -27,6 +32,8 @@
 						<option value="3">Zona Alta</option>
 						<option value="4">Zona Baja</option>
 					</select>
+					
+					<input type="hidden" name="id_f" value="<?php $id_foto?>">
 					<input type="text" name="url" placeholder="URL Imagen" required="required">
 
 					<hr>
@@ -38,7 +45,6 @@
 			</form>
 		</section>
 	</section>
-
 	
 </main>
 <?php

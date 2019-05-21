@@ -31,7 +31,7 @@ include("security/security.php");
 		<a href="../adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
 		<a href="">Servicios</a>
-		<a href="">Lugares</a>
+		<a href="../adm_lugares/index.php">Lugares</a>
 		<a href="">Personal</a>
 		<a href="../adm_visitas/index.php">Visitas</a>
 		<a href="">Sensores</a>
