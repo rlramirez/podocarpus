@@ -10,6 +10,12 @@
 		<h3>Nombre y Apellido</h3>
 		<p><a href="ramiro_ramirez/index.php">Ver Examen</a></p>
 	</section>
+<<<<<<< HEAD
+		<section class="box-dashboard c4">
+		<h3>Margory Ayala</h3>
+		<p><a href="margory_ayala/index.php">Ver Examen</a></p>
+	</section>
+=======
 
 
 	<section class="box-dashboard c4">
@@ -45,12 +51,15 @@
         <p><a href="juan_pachar/index.php">Ver Examen</a></p>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 44957abd477ff2dd69ce953a7e26e44bccb92a8b
 <<<<<<< HEAD
 =======
 >>>>>>> 7e21837be19aa5b0d3520d943a913091c9533668
 >>>>>>> 58db5086f2f23883ad158b6be427a093f6f9d8f0
 =======
+=======
+>>>>>>> 8a415802202b666857e1ba005a8a8d88f99dcd37
 
 >>>>>>> 84fa5912dbcda42ee783ce4232f8eee27460284c
 </main>
