@@ -48,6 +48,22 @@ class clase_mysqli{
 		return $this->Consulta_ID;
 	}
 
+	function consultaID($query){
+		$link = mysqli_connect($this->Servidor, $this->Usuario, $this->Clave, $this->BaseDatos);
+
+		/* check connection */
+		if (mysqli_connect_errno()) {
+			printf("Error de conexión: %s\n", mysqli_connect_error());
+			exit();
+		}
+		mysqli_query($link, $query);
+		$id_query =  mysqli_insert_id($link);
+		/* close connection */
+		mysqli_close($link);
+
+		return $id_query;
+	}
+
 	/*retorna el numero de campos de la consulta*/
 	function numcampos(){
 		return mysqli_num_fields($this->Consulta_ID);
@@ -73,7 +89,28 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
-	
+
+	function verconsulta_crud(){
+		echo "<table class='tablecud'>";
+		echo "<tr>";
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			//echo "<td>".$this->nombrecampo($i)."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
+		}
+		echo  "<th>Actualizar</th>";
+		echo  "<th>Borrar</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".utf8_encode($row[$i])."</td>";
+			}
+			echo "<td><a href='actualizar.php?id=$row[0]'><i class='fas fa-edit'></i></a></td>";
+			echo "<td><a href='borrar.php?idr=$row[0]'><i class='fas fa-trash-alt'></i></a></td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
 	function consulta_lista(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
 			for ($i=0; $i < $this->numcampos(); $i++) { 

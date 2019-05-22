@@ -26,17 +26,18 @@ include("security/security.php");
 	</header>
 	<nav class="mainmenu">
 		<a href="dashboard.php">Dashboard</a>
-		<a href="adm_birds/index.php">Aves</a>
+		<a href="./adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
-		<a href="adm_services/index.php">Servicios</a>
-		<a href="">Lugares</a>
-		<a href="">Personal</a>
-		<a href="adm_visitas/index.php">Visitas</a>
-		<a href="">Sensores</a>
-		<a href="">Actividades</a>
+		<a href="./adm_services/index.php">Servicios</a>
+		<a href="./adm_lugares/index.php">Lugares</a>
+		<a href="./adm_staff/index.php">Personal</a>
+		<a href="./adm_visitas/index.php">Visitas</a>
+		<a href="./adm_activities/adm_sensores.php">Sensores</a>
+		<a href="./adm_activities/index.php">Actividades</a>
+		<a href="./adm_test/index.php">Examenes</a>
 	</nav>
 	<main>
-		<section class="box-dashboard c1">
+		<section class="box-dashboard c1" >
 			<h3>Aves</h3>
 			<p>+ 230 aves</p>
 		</section>
@@ -49,10 +50,10 @@ include("security/security.php");
 			<p>+ 3 Servicios</p>
 		</section>
 		<section class="box-dashboard c4">
-			<h3>Lugares</h3>
-			<p>+ 21 Lugares</p>
+			<h3><a href="./adm_lugares/index.php"><i class="fas fa-tree"></i> Lugares</a></h3>
+			<p>+ 10 Lugares</p>
 		</section>
-		<section class="box-dashboard c5">
+		<section class="box-dashboard c5" href="./adm_staff/index.php">
 			<h3>Personal</h3>
 			<p>+ 11 Personal</p>
 		</section>
@@ -66,7 +67,11 @@ include("security/security.php");
 		</section>
 		<section class="box-dashboard c8">
 			<h3>Actividades</h3>
-			<p>+ 30 Actividaes</p>
+			<?php
+				$miconexion->consulta("select count(id) from usuarios");
+				$lista_u=$miconexion->consulta_lista();
+			?>
+			<p>+ <?php echo $lista_u[0]; ?> <i class="fas fa-user-friends"></i> Users</p>
 		</section>
 	</main>
 	<footer>
