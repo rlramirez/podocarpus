@@ -209,3 +209,41 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
+
+
+
+
+--
+-- Estructura de tabla para la tabla `quito_datos`
+--
+
+CREATE TABLE `quito_datos` (
+  `id` int(11) NOT NULL,
+  `hora` varchar(50) NOT NULL,
+  `fecha` varchar(50) NOT NULL,
+  `anemometro` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `quito_datos`
+--
+
+INSERT INTO `quito_datos` (`id`, `hora`, `fecha`, `anemometro`) VALUES
+(1, '15:30', '2019-05-22', '100'),
+(2, '15:31', '2019-05-22', '100'),
+(3, '15:32', '2019-05-22', '100'),
+(4, '15:33', '2019-05-23', '100');
+
+-- --------------------------------------------------------
+
+-- Indices de la tabla `quito_datos`
+--
+ALTER TABLE `quito_datos`
+  ADD PRIMARY KEY (`id`);
+
+
+--
+-- AUTO_INCREMENT de la tabla `quito_datos`
+--
+ALTER TABLE `quito_datos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
