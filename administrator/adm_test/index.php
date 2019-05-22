@@ -96,6 +96,11 @@
 >>>>>>> edabdd29c864154bf021725ba6665ce2b0944f8c
 >>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
 >>>>>>> c6c0345c64cf6fbb959c86f67be2dc75146db1a1
+
+<section class="box-dashboard c4">
+		<h3>Yoder Aguirre</h3>
+		<p><a href="yoder_aguirre/index.php">Ver Examen</a></p>
+	</section>
 </main>
 
 
