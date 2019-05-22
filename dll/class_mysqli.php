@@ -48,6 +48,22 @@ class clase_mysqli{
 		return $this->Consulta_ID;
 	}
 
+	function consultaID($query){
+		$link = mysqli_connect($this->Servidor, $this->Usuario, $this->Clave, $this->BaseDatos);
+
+		/* check connection */
+		if (mysqli_connect_errno()) {
+			printf("Error de conexión: %s\n", mysqli_connect_error());
+			exit();
+		}
+		mysqli_query($link, $query);
+		$id_query =  mysqli_insert_id($link);
+		/* close connection */
+		mysqli_close($link);
+
+		return $id_query;
+	}
+
 	/*retorna el numero de campos de la consulta*/
 	function numcampos(){
 		return mysqli_num_fields($this->Consulta_ID);
@@ -73,6 +89,7 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
+
 	function verconsulta_crud(){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
