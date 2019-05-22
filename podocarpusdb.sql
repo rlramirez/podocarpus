@@ -75,6 +75,31 @@ INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `ramon_datos`
+--
+
+CREATE TABLE `ramon_datos` (
+  `id` int(11) NOT NULL,
+  `temperatura` double NOT NULL,
+  `hora` varchar(20) NOT NULL,
+  `fecha` varchar(20) NOT NULL,
+  `anemometro` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `ramon_datos`
+--
+
+INSERT INTO `ramon_datos` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES
+(1, 65, '15:00', '22/05/2019', 65),
+(2, 69, '12:00', '23/05/2019', 25),
+(3, 75, '12:00', '2019-04-30', 12),
+(4, 75, '16:00', '2019-01-02', 75),
+(5, 78, '15:00', '2019-05-01', 20);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `servicios`
 --
 
