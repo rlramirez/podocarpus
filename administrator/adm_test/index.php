@@ -39,6 +39,11 @@
 		<h3>Freddy Villavicencio</h3>
 		<p><a href="villavicencio_freddy/index.php">Ver Examen</a></p>
 	</section>
+	
+	<section class="box-dashboard c4">
+		<h3>Luis Febre Paucar</h3>
+		<p><a href="febre_examen/index.php">Ver Examen</a></p>
+	</section>
 
     <section class="box-dashboard c4">
         <h3>Juan Pablo Pachar Viñan</h3>

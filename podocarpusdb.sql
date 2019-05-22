@@ -45,6 +45,19 @@ INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
 
 -- --------------------------------------------------------
 
+CREATE TABLE `febre_examen` (
+  `id_febre` int(11) NOT NULL,
+  `hora` varchar(45) DEFAULT NULL,
+  `temperatura` float DEFAULT NULL,
+  `fecha` varchar(200) DEFAULT NULL,
+  `anemometro` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `febre_examen` (`id_febre`, `hora`, `temperatura`, `fecha`, `anemometro`) VALUES
+(1, '18:00', 24, '2019-05-12', 34),
+(2, '17:00', 45, '2019-05-19', 37);
+
 --
 -- Estructura de tabla para la tabla `ramon_datos`
 --

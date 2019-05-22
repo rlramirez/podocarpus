@@ -196,5 +196,35 @@ class clase_mysqli{
 		echo '</table>';	
 
 	}
+
+	function verCrudFebre(){
+		echo "<div class='main-containerS'>";
+    	echo "<a href='nuevoServicio.php'> <button type='button' class='btnNuevo'>Nuevo</button> </a>" ;
+  	    echo "<table class='customers'>";
+  		echo  "<thead>";
+        echo     "<tr>";
+  			       echo " <th>Id</th> ";
+  			       echo " <th>Hora</th> ";
+					 echo " <th>Temperatura</th> ";
+					 echo " <th>Fecha</th> ";
+					 echo " <th>Anemometro</th> ";
+				 
+               	  
+                   echo "</tr>";
+  		           echo " </thead>";
+		           echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+				echo "<tr>";
+				echo "<td>".utf8_encode($row["id_febre"])."</td>";
+				echo "<td>".utf8_encode($row["hora"])."</td>";
+            	echo "<td>".utf8_encode($row["temperatura"])."</td>";
+            	echo "<td>".utf8_encode($row["fecha"])."</td>";
+				echo "<td>".utf8_encode($row["anemometro"])."</td>";
+				
+			echo "</tr>";
+		}
+		echo "</table>";
+		echo "</div>";
+	}
 }
 ?>
