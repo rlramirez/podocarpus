@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
@@ -477,3 +477,14 @@ COMMIT;
 =======
 >>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
 >>>>>>> 16fb486524a96bfc5ddaf8af37bfed94c372e15e
+
+CREATE TABLE `test`.`atiencia_examen` ( `Temperatura` INT NOT NULL , `Hora` VARCHAR NOT NULL , `Fecha` VARCHAR NOT NULL , `anemometro` INT NOT NULL ) ENGINE = InnoDB;
+INSERT INTO `atiencia_examen` (`Temperatura`, `Hora`, `Fecha`, `anemometro`) VALUES
+(45, '10:00', '20/05/2019', 27),
+(30, '10:00', '14/05/2019', 26),
+(36, '14:00', '14/05/2019', 25),
+(35, '15:00', '14/05/2019', 30),
+(40, '16:00', '14/05/2019', 28),
+(27, '14:00', '14/05/2019', 36),
+(39, '16:00', '14/05/2019', 34),
+(38, '17:00', '14/05/2019', 35);
