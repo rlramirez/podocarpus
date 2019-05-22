@@ -25,6 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `caicedo_sensor`
+--
+
+CREATE TABLE `caicedo_sensor` (
+  `hora` text NOT NULL,
+  `fecha` date NOT NULL,
+  `temperatura` float NOT NULL,
+  `anemometro` float NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `caicedo_sensor`
+--
+
+INSERT INTO `caicedo_sensor` (`hora`, `fecha`, `temperatura`, `anemometro`, `id`) VALUES
+('10:00', '2019-05-19', 18.5, 20.3, 6),
+('12:00', '2019-05-19', 16.5, 22.3, 7),
+('15:00', '2019-05-19', 12, 27, 8),
+('10:00', '2019-05-20', 25, 12.5, 9),
+('12:00', '2019-05-20', 15, 123, 10),
+('15:00', '2019-05-20', 10.5, 14.5, 11),
+('10:00', '2019-05-21', 8, 140.5, 12),
+('12:00', '2019-05-21', 20, 89.5, 13),
+('15:00', '2019-05-21', 14, 142, 14);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `aves`
 --
 
@@ -42,6 +71,31 @@ CREATE TABLE `aves` (
 
 INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
 (1, 'Águila', 'Aquila chrysaetos', 'Águila es el nombre dado a las mayores aves depredadoras. Las diversas especies y subespecies de águilas pueden encontrarse en casi cualquier parte del mundo excepto en la Antártida. Son miembros de las aves de presa, del orden de Accipitriformes, (o Falconiformes acorde a una clasificación anterior), familia Accipitridae, subfamilia Buteoninae.', 'Zona montañosa con bosques');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ramon_datos`
+--
+
+CREATE TABLE `ramon_datos` (
+  `id` int(11) NOT NULL,
+  `temperatura` double NOT NULL,
+  `hora` varchar(20) NOT NULL,
+  `fecha` varchar(20) NOT NULL,
+  `anemometro` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `ramon_datos`
+--
+
+INSERT INTO `ramon_datos` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES
+(1, 65, '15:00', '22/05/2019', 65),
+(2, 69, '12:00', '23/05/2019', 25),
+(3, 75, '12:00', '2019-04-30', 12),
+(4, 75, '16:00', '2019-01-02', 75),
+(5, 78, '15:00', '2019-05-01', 20);
 
 -- --------------------------------------------------------
 
@@ -209,6 +263,7 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
+<<<<<<< HEAD
 CREATE TABLE `gaona_sensor` (
   `id` int(11) NOT NULL,
   `temperatura` varchar(50) NOT NULL,
@@ -226,3 +281,114 @@ INSERT INTO `gaona_sensor` (`id`, `temperatura`, `hora`, `fecha`, `adem`) VALUES
 (5, '40', '20:45', '06/06/2019', '50'),
 (6, '36', '11:44', '07/06/2019', '10'),
 (7, '18', '11:40', '08/06/2019', '20');
+=======
+<<<<<<< HEAD
+CREATE TABLE `guarnizo_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(50) NOT NULL,
+  `hora` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `medidor` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `guarnizo_examen` (`id`, `temperatura`, `hora`, `fecha`, `medidor`) VALUES
+(4, 10, '10:00 am', '2019-05-22', 30),
+(5, 10, '12:30', '2019-05-04', 40),
+(6, 40, '14:00', '2019-05-11', 29),
+(7, 69, '13:40', '2019-05-04', 40);
+
+ALTER TABLE `guarnizo_examen`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `guarnizo_examen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+
+=======
+
+CREATE TABLE `apolo_examen` ( 
+  `idSensor` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  `temperatura` INT NOT NULL , 
+  `hora` TIME NOT NULL ,
+  `fecha` DATE NOT NULL , 
+  `velocidad` INT NOT NULL 
+  ) ENGINE = InnoDB;
+
+INSERT INTO `apolo_examen` (`temperatura`, `hora`, `fecha`, `velocidad`) VALUES (34, '12:17:00', '2019-05-28', 4);
+
+
+
+
+
+
+--
+-- Estructura de tabla para la tabla `quito_datos`
+--
+
+CREATE TABLE `quito_datos` (
+  `id` int(11) NOT NULL,
+  `hora` varchar(50) NOT NULL,
+  `fecha` varchar(50) NOT NULL,
+  `anemometro` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `quito_datos`
+--
+
+INSERT INTO `quito_datos` (`id`, `hora`, `fecha`, `anemometro`) VALUES
+(1, '15:30', '2019-05-22', '100'),
+(2, '15:31', '2019-05-22', '100'),
+(3, '15:32', '2019-05-22', '100'),
+(4, '15:33', '2019-05-23', '100');
+
+-- --------------------------------------------------------
+
+-- Indices de la tabla `quito_datos`
+--
+ALTER TABLE `quito_datos`
+  ADD PRIMARY KEY (`id`);
+
+
+--
+-- AUTO_INCREMENT de la tabla `quito_datos`
+--
+ALTER TABLE `quito_datos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+
+--Tabla de Freddy Villavicencio ---
+
+CREATE TABLE `villavicencio_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(11) NOT NULL,
+  `hora` varchar(10) NOT NULL,
+  `fecha` date NOT NULL,
+  `velocidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `villavicencio_examen`
+--
+
+INSERT INTO `villavicencio_examen` (`id`, `temperatura`, `hora`, `fecha`, `velocidad`) VALUES
+(7, 10, '17:23', '2019-05-22', 10),
+(9, 10, '17:43', '2019-05-22', 10);
+
+CREATE TABLE `pachar_sensores` (
+  `idSensores` int(11) NOT NULL,
+  `temperatura` VARCHAR(10)DEFAULT NULL,
+  `hora` VARCHAR(10) DEFAULT NULL
+  `fecha` varchar(100) DEFAULT NULL,
+  `anemometro` VARCHAR(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (1, '43', '09:00', '2019-05-30', '345');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (2, '43', '10:00', '2015-04-05', '234');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (6, '43', '19:00', '2019-07-22', '275');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (7, '43', '08:00', '2019-05-20', '30');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (8, '43', '18:00', '2019-07-20', '55');
+>>>>>>> 8a415802202b666857e1ba005a8a8d88f99dcd37
+
+
+>>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
