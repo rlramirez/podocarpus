@@ -46,6 +46,30 @@ INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `jaramillo_examen`
+--
+
+CREATE TABLE `jaramillo_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(11) NOT NULL,
+  `hora` varchar(11) NOT NULL,
+  `fecha` varchar(11) NOT NULL,
+  `anemometro` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `jaramillo_examen`
+--
+
+INSERT INTO `jaramillo_examen` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES
+(4, 35, '13:00', '22/05/2019', 10),
+(5, 30, '15:00', '23/05/2019', 28),
+(6, 22, '10:00', '24/05/2019', 15),
+(7, 20, '08:00', '26/05/2019', 32);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `servicios`
 --
 
@@ -112,6 +136,12 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `rol`, `user`, `pa
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `jaramillo_examen`
+--
+ALTER TABLE `jaramillo_examen`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `aves`

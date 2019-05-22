@@ -119,5 +119,56 @@ class clase_mysqli{
 			return $row;
 		}
 	}
+    
+    function verconsulta_jaramilloluis(){
+		echo "<table class='table_examen'>";
+		echo "<tr>";
+        echo  "<th class='t1'>ID</th>";
+        echo  "<th>Temperatura</th>";
+        echo  "<th>Hora</th>";
+		echo  "<th>Fecha</th>";
+		echo  "<th>Velocidad</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+    
+    function verconsulta_jaramilloluishora(){
+		echo "<table class='table_examen'>";
+		echo "<tr>";
+        echo  "<th>Hora</th>";
+		echo  "<th>Velocidad</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+    
+    function verconsulta_jaramilloluisfecha(){
+		echo "<table class='table_examen'>";
+		echo "<tr>";
+        echo  "<th>Fecha</th>";
+		echo  "<th>Velocidad</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
 }
 ?>
