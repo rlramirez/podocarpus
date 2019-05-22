@@ -64,6 +64,7 @@ class clase_mysqli{
 		return $id_query;
 	}
 
+
 	/*retorna el numero de campos de la consulta*/
 	function numcampos(){
 		return mysqli_num_fields($this->Consulta_ID);
@@ -73,16 +74,16 @@ class clase_mysqli{
 		return mysqli_num_rows($this->Consulta_ID);
 	}
 	function verconsulta(){
-		echo "<table border=1>";
+		echo "<table id='tablec' border=1>";
 		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
+		for ($i=0; $i < $this->numcampos() ; $i++) {
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
 		}
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "</tr>";
@@ -93,7 +94,7 @@ class clase_mysqli{
 	function verconsulta_crud(){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
+		for ($i=0; $i < $this->numcampos() ; $i++) {
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
@@ -102,7 +103,7 @@ class clase_mysqli{
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "<td><a href='actualizar.php?id=$row[0]'><i class='fas fa-edit'></i></a></td>";
@@ -111,6 +112,7 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
+<<<<<<< HEAD
 	function verconsulta_maria(){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
@@ -129,13 +131,91 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
+=======
+
+    function verconsulta_sensores(){
+        echo "<table class='table'>";
+        echo "<tr>";
+        for ($i=0; $i < $this->numcampos() ; $i++) {
+            //echo "<td>".$this->nombrecampo($i)."</td>";
+            echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
+        }
+        echo "</tr>";
+        while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+            echo "<tr>";
+            for ($i=0; $i < $this->numcampos(); $i++) {
+                echo "<td>".utf8_encode($row[$i])."</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
+
+>>>>>>> edabdd29c864154bf021725ba6665ce2b0944f8c
 	function consulta_lista(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				$row[$i];
 			}
 			return $row;
 		}
+	}
+
+	function insertar_villavicencio($sql=""){
+		$estado;
+		if($sql==""){
+			$this->Error="NO hay ninguna sentencia sql";
+			return 0;
+		}
+		
+		$this->Insertar_ID=mysqli_query($this->Conexion_ID,$sql);
+
+		if(!$this->Insertar_ID){
+			print $this->Conexion_ID->error;
+			$estado = 0;
+		}
+		else{
+			$estado = 1;
+		}
+		return $estado;
+	}
+
+	function tabla_villavicencio(){
+		$response = array();
+		$posts = array();
+		echo '<table cellspacing="0" cellpadding="0" id="mi-tabla" class="tabla">';
+		echo '<thead>';
+		echo '<tr>';
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			echo '<th><span>'. mysqli_fetch_field_direct($this->Consulta_ID, $i)->name .'</span></th>';
+
+		}
+		echo '</tr>';
+		echo '</thead>';
+		echo '<tbody>';
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo '<tr>';
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>". $row[$i] ."</td>";
+
+			}
+			echo "</tr>";
+			$temperatura=$row['temperatura'];
+			$hora=$row['hora'];
+			$fecha=$row['fecha'];
+			$velocidad=$row['velocidad'];
+			$posts[] = array('temperatura'=> $temperatura, 'hora'=>$hora, 'fecha'=>$fecha, 'velocidad'=>$velocidad);
+		}
+
+		$response = $posts;
+
+		$fp = fopen('results.json', 'w');
+		fwrite($fp, json_encode($response));
+		fclose($fp);
+		
+		echo '</tbody>';
+		echo '</table>';	
+
 	}
 }
 ?>
