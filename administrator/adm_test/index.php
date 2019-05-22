@@ -4,11 +4,11 @@
 <main>
 	<section class="box-dashboard c4">
 		<h3>Nombre y Apellido</h3>
-		<p><a href="ramiro_ramirez/index.php">Ver Examen</a></p>
+		<p><a href="jose_guarnizo/index.php">Ver Examen</a></p>
 	</section>
 	<section class="box-dashboard c4">
-		<h3>Nombre y Apellido</h3>
-		<p><a href="ramiro_ramirez/index.php">Ver Examen</a></p>
+		<h3>José Guarnizo</h3>
+		<p><a href="jose_guarnizo/index.php">Ver Examen</a></p>
 	</section>
 <<<<<<< HEAD
 		<section class="box-dashboard c4">
