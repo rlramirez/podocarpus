@@ -25,6 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `caicedo_sensor`
+--
+
+CREATE TABLE `caicedo_sensor` (
+  `hora` text NOT NULL,
+  `fecha` date NOT NULL,
+  `temperatura` float NOT NULL,
+  `anemometro` float NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `caicedo_sensor`
+--
+
+INSERT INTO `caicedo_sensor` (`hora`, `fecha`, `temperatura`, `anemometro`, `id`) VALUES
+('10:00', '2019-05-19', 18.5, 20.3, 6),
+('12:00', '2019-05-19', 16.5, 22.3, 7),
+('15:00', '2019-05-19', 12, 27, 8),
+('10:00', '2019-05-20', 25, 12.5, 9),
+('12:00', '2019-05-20', 15, 123, 10),
+('15:00', '2019-05-20', 10.5, 14.5, 11),
+('10:00', '2019-05-21', 8, 140.5, 12),
+('12:00', '2019-05-21', 20, 89.5, 13),
+('15:00', '2019-05-21', 14, 142, 14);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `aves`
 --
 

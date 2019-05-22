@@ -7,8 +7,13 @@
 		<p><a href="jose_guarnizo/index.php">Ver Examen</a></p>
 	</section>
 	<section class="box-dashboard c4">
+<<<<<<< HEAD
+		<h3>Marco Caicedo</h3>
+		<p><a href="marco_caicedo/index.php">Ver Examen</a></p>
+=======
 		<h3>José Guarnizo</h3>
 		<p><a href="jose_guarnizo/index.php">Ver Examen</a></p>
+>>>>>>> c555ede099c4cbdf28e72c4c6375559d72a981a6
 	</section>
 <<<<<<< HEAD
 		<section class="box-dashboard c4">
