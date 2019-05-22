@@ -46,6 +46,8 @@ INSERT INTO `sensores` (`id_sensor`, `latitud`, `longitud`, `descripcion`, `tipo
 (1, ' -4,3571', '-78,974', 'esta cámara se encuentra al sur del parque', 'jpg', 'manual', 'camara digital ');
 COMMIT;
 
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
