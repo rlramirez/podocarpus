@@ -14,7 +14,7 @@
 			<hr>
 			<h3>Nuevo Lugar</h3>
 			<!-- Metodo post para guardar formulario -->
-			<form method="post" action="nuevo_lugar.php" enctype="multipart/form-data">
+			<form method="post" action="nuevo_lugar.php">
 				<div class="contenedor-inputs">
 					<input type="text" name="nombre" placeholder="Nombre">
 					<input type="text" name="latitud" placeholder="Latitud" required="required">
@@ -28,12 +28,7 @@
 						<option value="4">Zona Baja</option>
 					</select>
 					<input type="text" name="url" placeholder="URL Imagen" required="required">
-
-					<hr>
-					<span>Subir Imagen</span>
-					<input type="file" name="imagen">
 				</div>
-				<hr>
 				<input type="submit" class="btn-submit" value="Guardar">
 			</form>
 		</section>

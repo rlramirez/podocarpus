@@ -4,8 +4,8 @@
 
 	//$cn = mysqli_connect("DBHOST","DBUSER","","insertdb") or die("Error");
 	
-	$id = $miconexion->consultaID("INSERT INTO lugares (`idLugares`, `nombre`, `latitud`, `longitud`, `descripcion`, `id_sector`) 
-	VALUES ('', '$nombre', $latitud, $longitud, '$descripcion', $sector)");
+	$miconexion->consulta("INSERT INTO lugares (`idLugares`, `nombre`, `latitud`, `longitud`, `descripcion`, `url`, `id_sector`) 
+	VALUES ('', '$nombre', $latitud, $longitud, '$descripcion', '$url', $sector)");
 
 
 	// if(isset($_FILES['imagen'])){
@@ -26,8 +26,7 @@
 
 
 
-	$miconexion->consulta("INSERT INTO fotos (`idFotos`, `url`, `id_lugares`) 
-							VALUES ('', '$url', $id)");
+	// $miconexion->consulta("INSERT INTO fotos (`idFotos`, `url`, `id_lugares`)  VALUES ('', '$url', $id)");
 	
 	echo "<script>location.href='index.php'</script>";
 ?>
