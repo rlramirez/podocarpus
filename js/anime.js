@@ -13,6 +13,13 @@ btnCerrarPopup.addEventListener('click', function(){
 	popup.classList.remove('active');
 });
 
+
+btnCerrarPopup.addEventListener('click', function(){
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+});
+
+
 function myFunction() {
   alert("Mensaje...");
 }

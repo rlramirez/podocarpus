@@ -25,13 +25,14 @@ include("security/security.php");
 		</nav>
 	</header>
 	<nav class="mainmenu">
-		<a href="../">Dashboard</a>
-		<a href="../adm_birds/index.php">Aves</a>
+		<a href="<?php echo $site_url; ?>/administrator/">Dashboard</a>
+		<a href="<?php echo $site_url; ?>/administrator/adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
 		<a href="">Servicios</a>
 		<a href="">Lugares</a>
 		<a href="">Personal</a>
 		<a href="">Visitas</a>
 		<a href="">Sensores</a>
-		<a href="../adm_activities/index.php">Actividades</a>
+		<a href="<?php echo $site_url; ?>/administrator/adm_activities/index.php">Actividades</a>
+		<a href="<?php echo $site_url; ?>/administrator/adm_test/index.php" >Examenes</a>
 	</nav>

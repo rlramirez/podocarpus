@@ -34,6 +34,7 @@ include("security/security.php");
 		<a href="./adm_visitas/index.php">Visitas</a>
 		<a href="./adm_activities/adm_sensores.php">Sensores</a>
 		<a href="./adm_activities/index.php">Actividades</a>
+		<a href="./adm_test/index.php">Examenes</a>
 	</nav>
 	<main>
 		<section class="box-dashboard c1">
@@ -66,7 +67,11 @@ include("security/security.php");
 		</section>
 		<section class="box-dashboard c8">
 			<h3>Actividades</h3>
-			<p>+ 30 Actividaes</p>
+			<?php
+				$miconexion->consulta("select count(id) from usuarios");
+				$lista_u=$miconexion->consulta_lista();
+			?>
+			<p>+ <?php echo $lista_u[0]; ?> <i class="fas fa-user-friends"></i> Users</p>
 		</section>
 	</main>
 	<footer>
