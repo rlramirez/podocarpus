@@ -46,6 +46,31 @@ INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `ramon_datos`
+--
+
+CREATE TABLE `ramon_datos` (
+  `id` int(11) NOT NULL,
+  `temperatura` double NOT NULL,
+  `hora` varchar(20) NOT NULL,
+  `fecha` varchar(20) NOT NULL,
+  `anemometro` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `ramon_datos`
+--
+
+INSERT INTO `ramon_datos` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES
+(1, 65, '15:00', '22/05/2019', 65),
+(2, 69, '12:00', '23/05/2019', 25),
+(3, 75, '12:00', '2019-04-30', 12),
+(4, 75, '16:00', '2019-01-02', 75),
+(5, 78, '15:00', '2019-05-01', 20);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `servicios`
 --
 
@@ -208,4 +233,89 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- fotos`
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
+
+
+CREATE TABLE `apolo_examen` ( 
+  `idSensor` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  `temperatura` INT NOT NULL , 
+  `hora` TIME NOT NULL ,
+  `fecha` DATE NOT NULL , 
+  `velocidad` INT NOT NULL 
+  ) ENGINE = InnoDB;
+
+INSERT INTO `apolo_examen` (`temperatura`, `hora`, `fecha`, `velocidad`) VALUES (34, '12:17:00', '2019-05-28', 4);
+
+
+
+
+
+
+--
+-- Estructura de tabla para la tabla `quito_datos`
+--
+
+CREATE TABLE `quito_datos` (
+  `id` int(11) NOT NULL,
+  `hora` varchar(50) NOT NULL,
+  `fecha` varchar(50) NOT NULL,
+  `anemometro` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `quito_datos`
+--
+
+INSERT INTO `quito_datos` (`id`, `hora`, `fecha`, `anemometro`) VALUES
+(1, '15:30', '2019-05-22', '100'),
+(2, '15:31', '2019-05-22', '100'),
+(3, '15:32', '2019-05-22', '100'),
+(4, '15:33', '2019-05-23', '100');
+
+-- --------------------------------------------------------
+
+-- Indices de la tabla `quito_datos`
+--
+ALTER TABLE `quito_datos`
+  ADD PRIMARY KEY (`id`);
+
+
+--
+-- AUTO_INCREMENT de la tabla `quito_datos`
+--
+ALTER TABLE `quito_datos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+
+--Tabla de Freddy Villavicencio ---
+
+CREATE TABLE `villavicencio_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(11) NOT NULL,
+  `hora` varchar(10) NOT NULL,
+  `fecha` date NOT NULL,
+  `velocidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `villavicencio_examen`
+--
+
+INSERT INTO `villavicencio_examen` (`id`, `temperatura`, `hora`, `fecha`, `velocidad`) VALUES
+(7, 10, '17:23', '2019-05-22', 10),
+(9, 10, '17:43', '2019-05-22', 10);
+
+CREATE TABLE `pachar_sensores` (
+  `idSensores` int(11) NOT NULL,
+  `temperatura` VARCHAR(10)DEFAULT NULL,
+  `hora` VARCHAR(10) DEFAULT NULL
+  `fecha` varchar(100) DEFAULT NULL,
+  `anemometro` VARCHAR(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (1, '43', '09:00', '2019-05-30', '345');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (2, '43', '10:00', '2015-04-05', '234');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (6, '43', '19:00', '2019-07-22', '275');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (7, '43', '08:00', '2019-05-20', '30');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (8, '43', '18:00', '2019-07-20', '55');
+
 
