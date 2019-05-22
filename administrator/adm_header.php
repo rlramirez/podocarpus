@@ -15,7 +15,10 @@ include("security/security.php");
 	<link rel="stylesheet" type="text/css" href="<?php echo $site_url;?>/administrator/css/style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $site_url;?>/administrator/adm_birds/adm_birds_css/estilos.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $site_url;?>/administrator/adm_birds/adm_birds_css/fontello.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $site_url;?>/administrator/adm_test/juan_pachar/css/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 <body>
 	<header>
