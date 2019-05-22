@@ -1,0 +1,16 @@
+<?php
+
+$sql = "  SELECT temperatura, anemometro FROM jaramillomaria_examen WHERE time Between 0:0:0 And 5:00:00; ";
+
+$result = mysql_query($sql, $conn) or die(mysql_error());
+
+//start the json data in the format Google Chart js/API expects to recieve it
+$data = array('cols' => array(array('label' => 'Temperatura', 'type' => 'number'),
+                              array('label' => 'Anemoemtro', 'type' => 'number')),
+              'rows' => array());
+
+while($row = mysql_fetch_row($result)) {
+   $data['rows'][] = array('c' => array(array('v' => $row[0]), array('v' => $row[1])));
+}    
+
+echo json_encode($data);
