@@ -209,3 +209,26 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
+CREATE TABLE `guarnizo_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(50) NOT NULL,
+  `hora` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `medidor` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `guarnizo_examen` (`id`, `temperatura`, `hora`, `fecha`, `medidor`) VALUES
+(4, 10, '10:00 am', '2019-05-22', 30),
+(5, 10, '12:30', '2019-05-04', 40),
+(6, 40, '14:00', '2019-05-11', 29),
+(7, 69, '13:40', '2019-05-04', 40);
+
+ALTER TABLE `guarnizo_examen`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `guarnizo_examen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+
+
+
