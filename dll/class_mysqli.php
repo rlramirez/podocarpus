@@ -64,6 +64,7 @@ class clase_mysqli{
 		return $id_query;
 	}
 
+
 	/*retorna el numero de campos de la consulta*/
 	function numcampos(){
 		return mysqli_num_fields($this->Consulta_ID);
@@ -118,6 +119,63 @@ class clase_mysqli{
 			}
 			return $row;
 		}
+	}
+
+	function insertar_villavicencio($sql=""){
+		$estado;
+		if($sql==""){
+			$this->Error="NO hay ninguna sentencia sql";
+			return 0;
+		}
+		
+		$this->Insertar_ID=mysqli_query($this->Conexion_ID,$sql);
+
+		if(!$this->Insertar_ID){
+			print $this->Conexion_ID->error;
+			$estado = 0;
+		}
+		else{
+			$estado = 1;
+		}
+		return $estado;
+	}
+
+	function tabla_villavicencio(){
+		$response = array();
+		$posts = array();
+		echo '<table cellspacing="0" cellpadding="0" id="mi-tabla" class="tabla">';
+		echo '<thead>';
+		echo '<tr>';
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			echo '<th><span>'. mysqli_fetch_field_direct($this->Consulta_ID, $i)->name .'</span></th>';
+
+		}
+		echo '</tr>';
+		echo '</thead>';
+		echo '<tbody>';
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo '<tr>';
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>". $row[$i] ."</td>";
+
+			}
+			echo "</tr>";
+			$temperatura=$row['temperatura'];
+			$hora=$row['hora'];
+			$fecha=$row['fecha'];
+			$velocidad=$row['velocidad'];
+			$posts[] = array('temperatura'=> $temperatura, 'hora'=>$hora, 'fecha'=>$fecha, 'velocidad'=>$velocidad);
+		}
+
+		$response = $posts;
+
+		$fp = fopen('results.json', 'w');
+		fwrite($fp, json_encode($response));
+		fclose($fp);
+		
+		echo '</tbody>';
+		echo '</table>';	
+
 	}
 }
 ?>
