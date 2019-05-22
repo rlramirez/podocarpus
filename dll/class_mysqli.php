@@ -119,5 +119,47 @@ class clase_mysqli{
 			return $row;
 		}
 	}
+
+	function insert_Gaona($sql=""){
+		$estado;
+		if($sql==""){
+			$this->Error="NO hay ninguna sentencia sql";
+			return 0;
+		}
+		
+		$this->Insertar_ID=mysqli_query($this->Conexion_ID,$sql);
+
+		if(!$this->Insertar_ID){
+			print $this->Conexion_ID->error;
+			$estado = 0;
+		}
+		else{
+			$estado = 1;
+		}
+		return $estado;
+	}
+
+	function gaonaTable(){
+		echo '<table cellspacing="0" cellpadding="0" id="tabla" class="tabla">';
+		echo '<thead>';
+		echo '<tr>';
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			echo '<th><span>'. mysqli_fetch_field_direct($this->Consulta_ID, $i)->name .'</span></th>';
+			
+		}
+		echo '</tr>';
+		echo '</thead>';
+		echo '<tbody>';
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo '<tr>';
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>". $row[$i] ."</td>";
+			}
+			echo "</tr>";
+		}
+
+		echo '</tbody>';
+		echo '</table>';
+	}
 }
 ?>

@@ -209,3 +209,20 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
+CREATE TABLE `gaona_sensor` (
+  `id` int(11) NOT NULL,
+  `temperatura` varchar(50) NOT NULL,
+  `hora` varchar(50) NOT NULL,
+  `fecha` varchar(50) NOT NULL,
+  `adem` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `gaona_sensor`
+--
+
+INSERT INTO `gaona_sensor` (`id`, `temperatura`, `hora`, `fecha`, `adem`) VALUES
+(4, '30', '12:45', '05/06/2019', '30'),
+(5, '40', '20:45', '06/06/2019', '50'),
+(6, '36', '11:44', '07/06/2019', '10'),
+(7, '18', '11:40', '08/06/2019', '20');
