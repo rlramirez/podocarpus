@@ -220,6 +220,26 @@ CREATE TABLE `apolo_examen` (
 
 INSERT INTO `apolo_examen` (`temperatura`, `hora`, `fecha`, `velocidad`) VALUES (34, '12:17:00', '2019-05-28', 4);
 
+
+
+--Tabla de Freddy Villavicencio ---
+
+CREATE TABLE `villavicencio_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(11) NOT NULL,
+  `hora` varchar(10) NOT NULL,
+  `fecha` date NOT NULL,
+  `velocidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `villavicencio_examen`
+--
+
+INSERT INTO `villavicencio_examen` (`id`, `temperatura`, `hora`, `fecha`, `velocidad`) VALUES
+(7, 10, '17:23', '2019-05-22', 10),
+(9, 10, '17:43', '2019-05-22', 10);
+
 CREATE TABLE `pachar_sensores` (
   `idSensores` int(11) NOT NULL,
   `temperatura` VARCHAR(10)DEFAULT NULL,
