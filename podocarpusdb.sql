@@ -209,3 +209,14 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
+
+
+CREATE TABLE `apolo_examen` ( 
+  `idSensor` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  `temperatura` INT NOT NULL , 
+  `hora` TIME NOT NULL ,
+  `fecha` DATE NOT NULL , 
+  `velocidad` INT NOT NULL 
+  ) ENGINE = InnoDB;
+
+INSERT INTO `apolo_examen` (`temperatura`, `hora`, `fecha`, `velocidad`) VALUES (34, '12:17:00', '2019-05-28', 4);
