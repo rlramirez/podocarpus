@@ -263,7 +263,18 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
-<<<<<<< HEAD
+
+CREATE TABLE `apolo_examen` ( 
+  `idSensor` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  `temperatura` INT NOT NULL , 
+  `hora` TIME NOT NULL ,
+  `fecha` DATE NOT NULL , 
+  `velocidad` INT NOT NULL 
+  ) ENGINE = InnoDB;
+
+INSERT INTO `apolo_examen` (`temperatura`, `hora`, `fecha`, `velocidad`) VALUES (34, '12:17:00', '2019-05-28', 4);
+
+
 
 
 
@@ -302,8 +313,7 @@ ALTER TABLE `quito_datos`
 --
 ALTER TABLE `quito_datos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-=======
-<<<<<<< HEAD
+
 
 --Tabla de Freddy Villavicencio ---
 
@@ -322,7 +332,7 @@ CREATE TABLE `villavicencio_examen` (
 INSERT INTO `villavicencio_examen` (`id`, `temperatura`, `hora`, `fecha`, `velocidad`) VALUES
 (7, 10, '17:23', '2019-05-22', 10),
 (9, 10, '17:43', '2019-05-22', 10);
-=======
+
 CREATE TABLE `pachar_sensores` (
   `idSensores` int(11) NOT NULL,
   `temperatura` VARCHAR(10)DEFAULT NULL,
@@ -336,5 +346,5 @@ INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `ane
 INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (6, '43', '19:00', '2019-07-22', '275');
 INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (7, '43', '08:00', '2019-05-20', '30');
 INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (8, '43', '18:00', '2019-07-20', '55');
->>>>>>> 44957abd477ff2dd69ce953a7e26e44bccb92a8b
->>>>>>> 7e21837be19aa5b0d3520d943a913091c9533668
+
+
