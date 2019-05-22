@@ -478,6 +478,7 @@ COMMIT;
 >>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
 >>>>>>> 16fb486524a96bfc5ddaf8af37bfed94c372e15e
 
+<<<<<<< HEAD
 CREATE TABLE `test`.`atiencia_examen` ( `Temperatura` INT NOT NULL , `Hora` VARCHAR NOT NULL , `Fecha` VARCHAR NOT NULL , `anemometro` INT NOT NULL ) ENGINE = InnoDB;
 INSERT INTO `atiencia_examen` (`Temperatura`, `Hora`, `Fecha`, `anemometro`) VALUES
 (45, '10:00', '20/05/2019', 27),
@@ -488,3 +489,48 @@ INSERT INTO `atiencia_examen` (`Temperatura`, `Hora`, `Fecha`, `anemometro`) VAL
 (27, '14:00', '14/05/2019', 36),
 (39, '16:00', '14/05/2019', 34),
 (38, '17:00', '14/05/2019', 35);
+=======
+CREATE TABLE `yoderaguirre` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(11) NOT NULL,
+  `hora` datetime NOT NULL,
+  `fecha` date NOT NULL,
+  `anemometro` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `yoderaguirre`
+--
+
+INSERT INTO `yoderaguirre` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES
+(1, 50, '2019-05-22 07:00:00', '2019-05-23', 20),
+(2, 5, '0000-00-00 00:00:00', '2019-05-17', 5),
+(3, 5, '0000-00-00 00:00:00', '2019-05-17', 5),
+(4, 4, '0000-00-00 00:00:00', '2019-05-10', 4),
+(5, 21, '0000-00-00 00:00:00', '2019-05-11', 12),
+(6, 546456, '0000-00-00 00:00:00', '0000-00-00', 546546);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `yoderaguirre`
+--
+ALTER TABLE `yoderaguirre`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `yoderaguirre`
+--
+ALTER TABLE `yoderaguirre`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+>>>>>>> 04ee64182dd986aa9314525ea314febb73601bb7
