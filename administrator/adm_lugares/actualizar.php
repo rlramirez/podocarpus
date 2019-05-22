@@ -23,13 +23,15 @@
 			<!-- Metodo post para guardar formulario -->
 			<form method="post" action="update.php">
 				<div class="contenedor-inputs">
-					<input type="hidden" name="idLugares" value="<?php $lista_l[0];?>">
+					<input type="hidden" name="idLugares" value="<?php echo $lista_l[0];?>">
 					<input type="text" name="nombre" placeholder="Nombre" value="<?php echo $lista_l[1];?>">
 					<input type="text" name="latitud" placeholder="Latitud"  value="<?php echo $lista_l[2];?>" required="required">
 					<input type="text" name="longitud" placeholder="Longitud"  value="<?php echo $lista_l[3];?>" required="required">
 					<input type="text" name="descripcion" placeholder="Descripción"  value="<?php echo $lista_l[4];?>" required="required">
 					<select name="sector">
-                        <option value="<?php echo $lista_l[6]; ?>"><?php echo $lista_sector[$lista_l[6]];?></option>
+						<!-- <option value="">Selecciones</option> -->
+						<option value="<?php echo $lista_l[6]; ?>"><?php echo $lista_sector[$lista_l[6]];?></option>
+						
 						<option value="1">Bombuscaro</option>
 						<option value="2">Romerillos</option>
 						<option value="3">Zona Alta</option>

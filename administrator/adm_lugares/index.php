@@ -17,7 +17,9 @@ include('../adm_header.php');
 			FROM lugares l JOIN sector s ON l.id_sector = s.idSector 
 			JOIN fotos f ON l.idLugares = f.id_lugares");
 			 */
-			$miconexion->consulta("SELECT l.idLugares ID, l.nombre Nombre_Lugar, l.latitud Latitud, l.longitud Longitud,l.descripcion Descripcion, l.url Url, s.nombre Sector FROM lugares l, sector s WHERE l.id_sector = s.idSector");
+			$miconexion->consulta("SELECT l.idLugares ID, l.nombre Nombre_Lugar, l.latitud Latitud, l.longitud Longitud,l.descripcion Descripcion, l.url Imagen, s.nombre Sector 
+			FROM lugares l, sector s 
+			WHERE l.id_sector = s.idSector");
 
 			$miconexion->verconsulta_crud();
 			?>
