@@ -10,6 +10,12 @@
 		<h3>Marco Caicedo</h3>
 		<p><a href="marco_caicedo/index.php">Ver Examen</a></p>
 	</section>
+<<<<<<< HEAD
+		<section class="box-dashboard c4">
+		<h3>Margory Ayala</h3>
+		<p><a href="margory_ayala/index.php">Ver Examen</a></p>
+	</section>
+=======
 
 
 	<section class="box-dashboard c4">
@@ -39,6 +45,7 @@
         <p><a href="juan_pachar/index.php">Ver Examen</a></p>
     </section>
 
+>>>>>>> 84fa5912dbcda42ee783ce4232f8eee27460284c
 </main>
 
 
