@@ -433,4 +433,47 @@ INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `ane
 >>>>>>> 8a415802202b666857e1ba005a8a8d88f99dcd37
 
 
+<<<<<<< HEAD
+CREATE TABLE `margory_ayala` (
+  `temperatura` decimal(30,0) NOT NULL,
+  `hora` time NOT NULL,
+  `fecha` date NOT NULL,
+  `anemometro` decimal(50,0) NOT NULL,
+  `id` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `margory_ayala`
+--
+
+INSERT INTO `margory_ayala` (`temperatura`, `hora`, `fecha`, `anemometro`, `id`) VALUES
+('24', '06:01:00', '2019-05-23', '10', 1),
+('45', '04:05:00', '2019-05-26', '0', 4),
+('5', '06:07:00', '2019-05-26', '0', 5),
+('34', '07:02:00', '2019-05-18', '0', 6),
+('23', '03:04:00', '2019-05-25', '3', 7),
+('54', '03:05:00', '2019-05-18', '44', 8);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `margory_ayala`
+--
+ALTER TABLE `margory_ayala`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `margory_ayala`
+--
+ALTER TABLE `margory_ayala`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+=======
 >>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
+>>>>>>> 16fb486524a96bfc5ddaf8af37bfed94c372e15e
