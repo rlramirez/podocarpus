@@ -73,16 +73,16 @@ class clase_mysqli{
 		return mysqli_num_rows($this->Consulta_ID);
 	}
 	function verconsulta(){
-		echo "<table border=1>";
+		echo "<table id='tablec' border=1>";
 		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
+		for ($i=0; $i < $this->numcampos() ; $i++) {
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
 		}
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "</tr>";
@@ -93,7 +93,7 @@ class clase_mysqli{
 	function verconsulta_crud(){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
+		for ($i=0; $i < $this->numcampos() ; $i++) {
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
@@ -102,7 +102,7 @@ class clase_mysqli{
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "<td><a href='actualizar.php?id=$row[0]'><i class='fas fa-edit'></i></a></td>";
@@ -113,7 +113,7 @@ class clase_mysqli{
 	}
 	function consulta_lista(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				$row[$i];
 			}
 			return $row;
