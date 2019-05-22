@@ -210,7 +210,6 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
 
-
 CREATE TABLE `apolo_examen` ( 
   `idSensor` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   `temperatura` INT NOT NULL , 
@@ -220,3 +219,18 @@ CREATE TABLE `apolo_examen` (
   ) ENGINE = InnoDB;
 
 INSERT INTO `apolo_examen` (`temperatura`, `hora`, `fecha`, `velocidad`) VALUES (34, '12:17:00', '2019-05-28', 4);
+
+CREATE TABLE `pachar_sensores` (
+  `idSensores` int(11) NOT NULL,
+  `temperatura` VARCHAR(10)DEFAULT NULL,
+  `hora` VARCHAR(10) DEFAULT NULL
+  `fecha` varchar(100) DEFAULT NULL,
+  `anemometro` VARCHAR(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (1, '43', '09:00', '2019-05-30', '345');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (2, '43', '10:00', '2015-04-05', '234');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (6, '43', '19:00', '2019-07-22', '275');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (7, '43', '08:00', '2019-05-20', '30');
+INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES (8, '43', '18:00', '2019-07-20', '55');
+
