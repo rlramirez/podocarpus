@@ -7,8 +7,8 @@
 		<p><a href="ramiro_ramirez/index.php">Ver Examen</a></p>
 	</section>
 	<section class="box-dashboard c4">
-		<h3>Nombre y Apellido</h3>
-		<p><a href="ramiro_ramirez/index.php">Ver Examen</a></p>
+		<h3>Marco Caicedo</h3>
+		<p><a href="marco_caicedo/index.php">Ver Examen</a></p>
 	</section>
 </main>
 <?php
