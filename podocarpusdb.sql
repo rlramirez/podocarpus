@@ -25,6 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `caicedo_sensor`
+--
+
+CREATE TABLE `caicedo_sensor` (
+  `hora` text NOT NULL,
+  `fecha` date NOT NULL,
+  `temperatura` float NOT NULL,
+  `anemometro` float NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `caicedo_sensor`
+--
+
+INSERT INTO `caicedo_sensor` (`hora`, `fecha`, `temperatura`, `anemometro`, `id`) VALUES
+('10:00', '2019-05-19', 18.5, 20.3, 6),
+('12:00', '2019-05-19', 16.5, 22.3, 7),
+('15:00', '2019-05-19', 12, 27, 8),
+('10:00', '2019-05-20', 25, 12.5, 9),
+('12:00', '2019-05-20', 15, 123, 10),
+('15:00', '2019-05-20', 10.5, 14.5, 11),
+('10:00', '2019-05-21', 8, 140.5, 12),
+('12:00', '2019-05-21', 20, 89.5, 13),
+('15:00', '2019-05-21', 14, 142, 14);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `aves`
 --
 
@@ -59,6 +88,28 @@ INSERT INTO `febre_examen` (`id_febre`, `hora`, `temperatura`, `fecha`, `anemome
 (2, '17:00', 45, '2019-05-19', 37);
 
 --
+<<<<<<< HEAD
+-- Estructura de tabla para la tabla `jaramillo_examen`
+--
+
+CREATE TABLE `jaramillo_examen` (
+  `id` int(11) NOT NULL,
+  `temperatura` int(11) NOT NULL,
+  `hora` varchar(11) NOT NULL,
+  `fecha` varchar(11) NOT NULL,
+  `anemometro` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `jaramillo_examen`
+--
+
+INSERT INTO `jaramillo_examen` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) VALUES
+(4, 35, '13:00', '22/05/2019', 10),
+(5, 30, '15:00', '23/05/2019', 28),
+(6, 22, '10:00', '24/05/2019', 15),
+(7, 20, '08:00', '26/05/2019', 32);
+=======
 -- Estructura de tabla para la tabla `ramon_datos`
 --
 
@@ -80,6 +131,7 @@ INSERT INTO `ramon_datos` (`id`, `temperatura`, `hora`, `fecha`, `anemometro`) V
 (3, 75, '12:00', '2019-04-30', 12),
 (4, 75, '16:00', '2019-01-02', 75),
 (5, 78, '15:00', '2019-05-01', 20);
+>>>>>>> c6c0345c64cf6fbb959c86f67be2dc75146db1a1
 
 -- --------------------------------------------------------
 
@@ -150,6 +202,12 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `correo`, `rol`, `user`, `pa
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `jaramillo_examen`
+--
+ALTER TABLE `jaramillo_examen`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `aves`
@@ -247,6 +305,25 @@ INSERT INTO `podocarpusdb`.`lugares` (`idLugares`, `nombre`, `latitud`, `longitu
 -- -----------------------------------------------------
 INSERT INTO `podocarpusdb`.`fotos` (`idFotos`, `url`, `id_lugares`) VALUES (1, 'https://especiales.elcomercio.com/planeta-ideas/imagenes/imagenes/ambiente-laguna.jpg', 1);
 
+<<<<<<< HEAD
+CREATE TABLE `gaona_sensor` (
+  `id` int(11) NOT NULL,
+  `temperatura` varchar(50) NOT NULL,
+  `hora` varchar(50) NOT NULL,
+  `fecha` varchar(50) NOT NULL,
+  `adem` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `gaona_sensor`
+--
+
+INSERT INTO `gaona_sensor` (`id`, `temperatura`, `hora`, `fecha`, `adem`) VALUES
+(4, '30', '12:45', '05/06/2019', '30'),
+(5, '40', '20:45', '06/06/2019', '50'),
+(6, '36', '11:44', '07/06/2019', '10'),
+(7, '18', '11:40', '08/06/2019', '20');
+=======
 <<<<<<< HEAD
 CREATE TABLE `guarnizo_examen` (
   `id` int(11) NOT NULL,
@@ -356,3 +433,4 @@ INSERT INTO `pachar_sensore` (`idSensores`, `temperatura`, `hora`, `fecha`, `ane
 >>>>>>> 8a415802202b666857e1ba005a8a8d88f99dcd37
 
 
+>>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883

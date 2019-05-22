@@ -74,16 +74,16 @@ class clase_mysqli{
 		return mysqli_num_rows($this->Consulta_ID);
 	}
 	function verconsulta(){
-		echo "<table border=1>";
+		echo "<table id='tablec' border=1>";
 		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
+		for ($i=0; $i < $this->numcampos() ; $i++) {
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
 		}
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "</tr>";
@@ -94,7 +94,7 @@ class clase_mysqli{
 	function verconsulta_crud(){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
-		for ($i=0; $i < $this->numcampos() ; $i++) { 
+		for ($i=0; $i < $this->numcampos() ; $i++) {
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
 		}
@@ -103,7 +103,7 @@ class clase_mysqli{
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				echo "<td>".utf8_encode($row[$i])."</td>";
 			}
 			echo "<td><a href='actualizar.php?id=$row[0]'><i class='fas fa-edit'></i></a></td>";
@@ -112,6 +112,26 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
+<<<<<<< HEAD
+	function verconsulta_maria(){
+		echo "<table class='tablecud'>";
+		echo "<tr>";
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			//echo "<td>".$this->nombrecampo($i)."</td>";
+			echo  "<th>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</th>";
+		}
+
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".utf8_encode($row[$i])."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+=======
 
     function verconsulta_sensores(){
         echo "<table class='table'>";
@@ -131,16 +151,73 @@ class clase_mysqli{
         echo "</table>";
     }
 
+>>>>>>> edabdd29c864154bf021725ba6665ce2b0944f8c
 	function consulta_lista(){
 		while ($row = mysqli_fetch_array($this->Consulta_ID)) {
-			for ($i=0; $i < $this->numcampos(); $i++) { 
+			for ($i=0; $i < $this->numcampos(); $i++) {
 				$row[$i];
 			}
 			return $row;
 		}
 	}
+<<<<<<< HEAD
+    
+    function verconsulta_jaramilloluis(){
+		echo "<table class='table_examen'>";
+		echo "<tr>";
+        echo  "<th class='t1'>ID</th>";
+        echo  "<th>Temperatura</th>";
+        echo  "<th>Hora</th>";
+		echo  "<th>Fecha</th>";
+		echo  "<th>Velocidad</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+    
+    function verconsulta_jaramilloluishora(){
+		echo "<table class='table_examen'>";
+		echo "<tr>";
+        echo  "<th>Hora</th>";
+		echo  "<th>Velocidad</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+    
+    function verconsulta_jaramilloluisfecha(){
+		echo "<table class='table_examen'>";
+		echo "<tr>";
+        echo  "<th>Fecha</th>";
+		echo  "<th>Velocidad</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+=======
 
+<<<<<<< HEAD
+	function insert_Gaona($sql=""){
+=======
 	function insertar_villavicencio($sql=""){
+>>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
 		$estado;
 		if($sql==""){
 			$this->Error="NO hay ninguna sentencia sql";
@@ -159,15 +236,24 @@ class clase_mysqli{
 		return $estado;
 	}
 
+<<<<<<< HEAD
+	function gaonaTable(){
+		echo '<table cellspacing="0" cellpadding="0" id="tabla" class="tabla">';
+=======
 	function tabla_villavicencio(){
 		$response = array();
 		$posts = array();
 		echo '<table cellspacing="0" cellpadding="0" id="mi-tabla" class="tabla">';
+>>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
 		echo '<thead>';
 		echo '<tr>';
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			echo '<th><span>'. mysqli_fetch_field_direct($this->Consulta_ID, $i)->name .'</span></th>';
+<<<<<<< HEAD
+			
+=======
 
+>>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
 		}
 		echo '</tr>';
 		echo '</thead>';
@@ -176,6 +262,14 @@ class clase_mysqli{
 			echo '<tr>';
 			for ($i=0; $i < $this->numcampos(); $i++) { 
 				echo "<td>". $row[$i] ."</td>";
+<<<<<<< HEAD
+			}
+			echo "</tr>";
+		}
+
+		echo '</tbody>';
+		echo '</table>';
+=======
 
 			}
 			echo "</tr>";
@@ -195,6 +289,8 @@ class clase_mysqli{
 		echo '</tbody>';
 		echo '</table>';	
 
+>>>>>>> c50c7dd66db94046ca4a1d55ca858c67f2c1a883
+>>>>>>> c6c0345c64cf6fbb959c86f67be2dc75146db1a1
 	}
 
 	function verCrudFebre(){

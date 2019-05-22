@@ -1,0 +1,80 @@
+
+main {
+	background: #1a6b91;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Lato', Arial, sans-serif;
+	margin:0;
+	padding:0;
+	padding-bottom:60px;
+}
+
+/* Form CSS*/
+.ccform {
+   margin: 0 auto;
+    width: 800px;
+}
+.ccfield-prepend{
+	margin-bottom:10px;
+	width:100%;
+}
+
+.ccform-addon{
+	color:#f8ae45; 
+	float:left;
+	padding:8px;
+	width:8%;
+	background:#FFFFFF;
+	text-align:center;	
+}
+
+.ccformfield {
+	color:#000000; 
+	background:#FFFFFF;
+	border:none;
+	padding:15.5px;
+	width:91.9%;
+	display:block;
+	font-family: 'Lato',Arial,sans-serif;
+	font-size:14px;
+}
+
+.ccformfield {
+	font-family: 'Lato',Arial,sans-serif;
+}
+.ccbtn{
+	display:block;
+	border:none;
+	background:#f8ae45;
+	color:#FFFFFF;
+	padding:12px 25px;
+	cursor:pointer;
+	text-decoration:none;
+	font-weight:bold;
+}
+.ccbtn:hover{
+	background:#d8850e;
+
+}
+.tabla {
+	width: 100%;
+	border: 1px solid #000;
+ }
+ th, td {
+	width: 25%;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid #000;
+	border-collapse: collapse;
+	padding: 0.3em;
+	caption-side: bottom;
+ }
+ caption {
+	padding: 0.3em;
+	color: rgb(255, 255, 255);
+	 background: #000;
+ }
+ th {
+	background:red;
+ }
