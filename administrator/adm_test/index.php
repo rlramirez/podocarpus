@@ -11,6 +11,12 @@
 		<p><a href="ramiro_ramirez/index.php">Ver Examen</a></p>
 	</section>
 <<<<<<< HEAD
+	<section class="box-dashboard c4">
+		<h3>Juan Ramon</h3>
+		<p><a href="juan_ramon/index.php">Ver Examen</a></p>
+	</section>
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 		<section class="box-dashboard c4">
