@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic);
+
+/*body{
+  padding-top:15px;
+  font-family: 'Open Sans', sans-serif;
+	font-size:13px;
+}*/
+
+.content{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+h3{
+  padding: 1em 0em 2em 0em;
+}
+
+.tabla {
+  margin: 0 auto;
+  
+}
+.tabla thead {
+  background: rgba(0, 0, 0, .2);
+}
+.tabla thead tr th { 
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.tabla thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 55%;
+}
+.tabla thead tr th.headerSortUp,
+.tabla thead tr th.headerSortDown {
+  background: rgba(0, 0, 0, .2);
+}
+.tabla thead tr th.headerSortUp span {
+  background-image: url('http://tablesorter.com/themes/blue/asc.gif');
+}
+.tabla thead tr th.headerSortDown span {
+  background-image: url('http://tablesorter.com/themes/blue/desc.gif');
+}
+.tabla tbody tr td {
+  text-align: center;
+  padding: 10px 20px;
+}
+.tabla tbody tr td.align-left {
+  text-align: left;
+}
+
+.boton{
+      text-align:center;
+      text-decoration: none;
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      display:inline-block;
+      color: #FFF;
+      float: left;
+      background: #7F8C8D;
+      padding: 10px 25px;
+      white-space: nowrap;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      margin: 10px 5px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+}
+
+.azul{
+  background: #3498DB;
+}
+
+.azul:hover{
+  background: #2980B9;
+}
+
+#fre_tw{
+  width: 70%;
+  margin: 0 auto;
+  background: #D8D8D8;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
