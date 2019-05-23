@@ -151,7 +151,11 @@ CREATE TABLE `servicios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
-
+INSERT INTO `servicios` (`id_servicios`, `nom_servicio`, `fecha_ini_tem`, `fecha_fin_tem`, `capacidad`, `responsable`, `informacion`, `galeria`) VALUES
+(1, 'Caminatas', '2019-02-01', '2019-04-01', 35, 'Danilo Alfredo  Perez  Ochoa', '<p>Ofrece a los turistas caminatas y excursiones por los senderos educativos autoguiados, el m&aacute;s corto es el sendero Oso de Anteojos, cuyo recorrido dura 15 min.&nbsp;</p>', '1558498006_caminata.jpg'),
+(2, 'Caballos', '2019-01-01', '2019-12-24', 22, 'Luis Eduar Cajas Macas', '<p>Es un centro ecuestre muy conocido y tamb&eacute;n nosotros le ofrecemos varios tours directamente de la hoster&iacute;a, en cooperaci&oacute;n con los mejores gu&iacute;as nativos de Podocarpus.</p>', '1558647415_CABALLOS.jpg'),
+(3, 'Fotos', '2019-04-15', '2019-08-31', 100, 'Mariuxi Fernanda Extrada Paucar', '<p>Dentro de la hoster&iacute;a se pueden observar una gran variedad de aves nativas , en el parque nacional &quot;Podocarpus&quot; existen alrededor de 620 especies.</p>', '1558373328_por-que-observar-aves1.jpg'),
+(4, 'Campamento', '2019-05-01', '2019-11-07', 170, 'Karla Fernanda Torrez Macas', '<p>Nos permite disfrutar del contacto con la naturaleza, el descubrimiento personal unico, compartir con familiares en un &aacute;mbito diferente.</p>', '1558234701_campamento.jpg');
 --
 -- Estructura de tabla para la tabla `staff`
 --

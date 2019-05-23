@@ -45,27 +45,28 @@
 		</div>
 	</div>
 	<main>
+	
 		<section class="servicios">
-			<a name="service"></a>
-			<h2>Servicios</h2>
-			<section class="serviciodetalle">
-				<img src="images/service1.jpg">
-				<h3>Recoleccion de datos</h3>
-				<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
-			</section>
-			<section class="serviciodetalle">
-				<img src="images/service2.jpg">
-				<h3>Recoleccion de datos</h3>
-				<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
-			</section>
-			<section class="serviciodetalle">
-				<img src="images/service3.jpg">
-				<h3>Recoleccion de datos</h3>
-				<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
-			</section>
-			<br><br>
-				<h3><a href="">Mas información</a></h3>
-		</section>
+		<a name="service"></a>
+		<?php
+		//LLamo sentencias
+		include("dll/config.php");
+		include("dll/class_mysqli.php");
+		$miconexion = new clase_mysqli;
+		$miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+
+		$miconexion->consulta("SELECT * FROM servicios ORDER BY id_servicios ASC  LIMIT 3");
+		$listaServicios=$miconexion->consulta3Servicios();
+		  
+		?>
+
+		<br><br>
+			<h3><a href="servicios.php">Mas información</a></h3>
+	</section>
+	
+	
+	
+		
 		<section class="lugares">
 			<h2>Lugares</h2>
 			<div id="mapid" style="width: 100%; height: 450px;"></div>

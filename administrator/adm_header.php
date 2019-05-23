@@ -40,7 +40,7 @@ include("security/security.php");
 		<a href="<?php echo $site_url; ?>/administrator/">Dashboard</a>
 		<a href="<?php echo $site_url; ?>/administrator/adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
-		<a href="">Servicios</a>
+		<a href="../adm_services/index.php">Servicios</a>
 		<a href="../adm_lugares/index.php">Lugares</a>
 >>>>>>> 041167ca255354af9d7fca91e03001c02e559bd6
 		<a href="">Personal</a>

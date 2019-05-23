@@ -483,5 +483,79 @@ class clase_mysqli{
 		echo "</div>";
 
 	}
+
+	function consultaCrudServicios(){
+		echo "<div class='main-containerS'>";
+    	echo "<a href='nuevoServicio.php'> <button type='button' class='btnNuevo'>Nuevo</button> </a>" ;
+  	    echo "<table class='customers'>";
+  		echo  "<thead>";
+        echo     "<tr>";
+  			       echo " <th>Id Servicio</th> ";
+  			       echo " <th>Nombre</th> ";
+  			       echo " <th>Inicio Temporada</th> ";
+				   echo " <th>Fin Temporada</th> ";
+				   echo " <th>Capacidad</th> ";
+  			       echo " <th>Responsable</th> ";
+  			       echo " <th>InformaciÃ³n</th> ";
+               	   echo " <th>Foto</th> ";
+               	   echo " <th>Accion 1</th> ";
+                   echo " <th>Accion 2</th> ";
+                   echo "</tr>";
+  		           echo " </thead>";
+		           echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+				echo "<tr>";
+				echo "<td>".utf8_encode($row["id_servicios"])."</td>";
+				echo "<td>".utf8_encode($row["nom_servicio"])."</td>";
+            	echo "<td>".utf8_encode($row["fecha_ini_tem"])."</td>";
+            	echo "<td>".utf8_encode($row["fecha_fin_tem"])."</td>";
+				echo "<td>".utf8_encode($row["capacidad"])."</td>";
+				echo "<td>".utf8_encode($row["responsable"])."</td>";
+				echo "<td>".utf8_encode($row["informacion"])."</td>";
+            	$direccion = $row['galeria'];
+            	echo "<td><img src='../../images/". $direccion ."' border='0' width='200' height='100' /></td>";
+			
+
+				echo "<td><a href='modifServicio.php?no=".$row['id_servicios']."'> <button type='button' class='btnModificar'>Modificar</button> </a></td>";
+				echo " <td><a href='eliminarServicio.php?no=".$row['id_servicios']."'> <button type='button' class='btnEliminar'>Eliminar</button> </a></td>";
+
+			
+			echo "</tr>";
+		}
+		echo "</table>";
+		echo "</div>";
+	}
+
+
+	function consulta3Servicios(){
+
+			echo "<h2>Servicios</h2>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<section class ='serviciodetalle'>";
+			$direccion = $row['galeria'];
+			echo "<img src='images/".$direccion."'>";
+			echo "<h3>".utf8_encode($row["nom_servicio"])."</h3>";
+			echo "<p>".utf8_encode($row["informacion"])."</p>";
+		
+			echo "</section>";
+
+		}
+
+	}
+
+	function consultarTodosServicios(){
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<div class='product'>";
+			$direccion = $row['galeria'];
+			echo "<img src='images/".$direccion."' class='product-img'>";
+			echo "<div class='product-content'> </div>";
+			echo "<h3 class='product-title'>".utf8_encode($row["nom_servicio"])."</h3>";
+			echo "<p>".utf8_encode($row["informacion"])."</p>";
+			echo "<p class='fintprint'>".utf8_encode($row["responsable"])."</p>";
+			echo "</div>";
+
+		}
+
+	}
 }
 ?>
