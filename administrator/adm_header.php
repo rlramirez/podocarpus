@@ -26,12 +26,12 @@ include("security/security.php");
 	</header>
 	<nav class="mainmenu">
 		<a href="../">Dashboard</a>
-		<a href="adm_birds/index.php">Aves</a>
-		<a href="">Noticias</a>
-		<a href="">Servicios</a>
+		<a href="../adm_birds/index.php">Aves</a>
+		<a href="../adm_notices/index.php">Noticias</a>
+		<a href="../adm_services/index.php">Servicios</a>
 		<a href="">Lugares</a>
 		<a href="">Personal</a>
 		<a href="">Visitas</a>
 		<a href="">Sensores</a>
-		<a href="adm_activities/index.php">Actividades</a>
+		<a href="../adm_activities/index.php">Actividades</a>
 	</nav>

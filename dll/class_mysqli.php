@@ -63,13 +63,19 @@ class clase_mysqli{
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
 		}
+		echo  "<td>Moficar</td>";
+		
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
 			for ($i=0; $i < $this->numcampos(); $i++) { 
 				echo "<td>".utf8_encode($row[$i])."</td>";
+				
 			}
+			echo '<td><a href="">Modificar</a><td>';
+			echo '<td><a href="">Elimimar</a><td>';
 			echo "</tr>";
+
 		}
 		echo "</table>";
 	}
@@ -81,6 +87,186 @@ class clase_mysqli{
 			}
 			return $row;
 		}
+	}
+
+	function insertar($sql=""){
+		$estado;
+		if($sql==""){
+			$this->Error="NO hay ninguna sentencia sql";
+			return 0;
+		}
+		
+		$this->Insertar_ID=mysqli_query($this->Conexion_ID,$sql);
+
+		if(!$this->Insertar_ID){
+			print $this->Conexion_ID->error;
+			$estado = 0;
+		}
+		else{
+			$estado = 1;
+		}
+		return $estado;
+	}
+
+	function vernoticia(){
+		echo '<table class="tabla">';
+
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo '<tr class="fila">';
+			//for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo '<td class="col_fecha">'.$row['fecha']. '<br><br><a href="editar_noticia.php?variable_id='.$row['idNoticia'].'"><span class="icon-pencil" title="Modificar"></span></a><br><br><a href="eliminar_noticia.php?variable_id='.$row['idNoticia'].'"><span class="icon-bin" title="Eliminar"></span></a></td>';
+				echo '<td class="col_contenido"> <a class="col_titulo" href="noticia.php?variable_id='.$row['idNoticia'].'" target="_blank">'. $row['titulo']. "</a>" .'<br><br><p class="col_des">' . $row['descripcion'] ."</p></td>";
+				echo "<td>". '<img src="'. $row['imagen'] . '" width="250px" />' ."</td>";
+				
+			//}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+
+	function vercategoria_noticia(){
+		$combobit = "";
+		if (mysqli_num_rows($this->Consulta_ID)) {
+			/*$valor = "ok";
+			$combobit = "<option value='0'>" . $valor . "</option>";*/
+			while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+				$combobit .= "<option value='" . $row['idCategoria'] . "'>" . $row['categoria'] . "</option>";
+			}
+		}
+		/*else{
+			$valor = "Error";
+			$combobit = "<option value='0'>" . $valor . "</option>";
+		}*/
+
+		return $combobit;
+	}
+
+	function modificar_noticia(){
+		$row=mysqli_fetch_array($this->Consulta_ID);
+		echo '<div class="noticia">';
+		echo '<form method="post" enctype="multipart/form-data"  action="" id="image-form" name="form2">';
+		echo '<div class="three_col">';
+
+		echo '<select required="required" title="Categoría" name="id_categoria2" id="sel">';
+			$miconexion = new clase_mysqli;
+			$miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+			$miconexion->consulta("Select * from categoria");
+		echo $miconexion->vercategoria_noticia();
+		echo "<script>";
+		echo "$(document).ready(function(){";
+  		echo '$("#sel").val("'.$row['idCategoria'].'")';
+		echo "});";
+		echo "</script>";
+		echo '</select>';
+		echo '<input type="text" name="fecha2" title="Fecha" placeholder="Fecha" class="default" readonly="readonly" msg="Error for First name" value="'.$row['fecha'].'">';
+		echo '<span class="error"></span>';
+		echo '<input type="text" name="autor2" placeholder="Autor (Máximo 45 caracteres)" class="default" msg="Error for Last name" required="required" maxlength="45" value="'.$row['autor'].'">';
+		echo '<span class="error"></span>';
+		echo '</div>';
+		echo '<div class="one_col email">';
+		echo '<input type="text" name="titulo2" placeholder="Título (Máximo 100 caracteres)" class="default" msg="Please enter a valid email" required="required" maxlength="100" value="'.$row['titulo'].'">';
+		echo '</div>';
+		echo '<div class="one_col">';
+		echo '<textarea rows="2" cols="20" placeholder="Entradilla (Máximo 225 caracteres)" name="entradilla2" required="required" id="entradilla" maxlength="225">'.$row['descripcion'].'</textarea>';
+		echo '</div>';
+		echo '<div class="one_col2">';
+		echo '<textarea rows="10" cols="20" placeholder="Contenido (Máximo 5000 caracteres)" name="contenido2" required="required" class="contenido2" id="contenido2" maxlength="5000">'.$row['contenido'].'</textarea>';
+		echo '</div>';
+		echo '<div class="one_col file-upload">';
+		echo '<div id="file"><ul id="image-list"><p>Click or Drag in an image to upload</p></ul></div>';
+		echo '<input type="file" class="file" name="imagen2" id="images" />';
+		echo '<input type="text" class="file" name="imagen22" readonly="readonly" id="images" value="'.$row['imagen'].'"/>';
+
+		echo '<span class="error"></span>';
+		echo '</div>';
+		echo '<div class="one_col">';
+		echo '<input id="submit" type="submit" value="Guardar Noticia" />';
+		echo '</div>';
+		echo '<span class="clear"></span>';
+		echo '</form>';
+		echo '</div>';
+	}
+
+
+	function eliminar_noticia(){
+		$row=mysqli_fetch_array($this->Consulta_ID);
+		echo '<section id="sec_eliminar">';
+		echo '<table class="tabla">';
+
+		
+			echo '<tr class="fila">';
+			//for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo '<td class="col_fecha">'.$row['fecha']. '</td>';
+				echo '<td class="col_contenido"> <a class="col_titulo" href="noticia.php?variable_id='.$row['idNoticia'].'" target="_blank">'. $row['titulo']. "</a>" .'<br><br><p class="col_des">' . $row['descripcion'] ."</p></td>";
+				echo "<td>". '<img src="'. $row['imagen'] . '" width="250px" />' ."</td>";
+				
+			//}
+			echo "</tr>";
+		
+		echo "</table>";
+		echo '<form method="post" enctype="multipart/form-data"  action="" name="formeliminar">';
+		echo '<input type="text" name="inputeliminar" title="Fecha" placeholder="Fecha" class="ideliminar" value="'.$row['idNoticia'].'">';
+		echo '<input id="submiteliminar" type="submit" value="Eliminar Noticia" />';
+		echo '</form>';
+		echo '</section>';
+	}
+
+	function noticia(){
+		$row=mysqli_fetch_array($this->Consulta_ID);
+		echo '<section id="secnoticia">';
+		echo '<p id="ptitulo">'.$row['titulo'].'</p>';
+		echo '<div>';
+		echo '<img src="'. $row['imagen'] . '" width="100%" />';
+		echo '<p id="pdes">'.$row['descripcion'].'</p><p id="pautor">'.$row['autor'].'</p>';
+		echo '</div>';
+		echo '<div id="divcate">';
+		echo '<p id="pcate">'.$row['categoria'].' | '.$row['fecha'].'</p>';
+		echo '</div>';
+		echo '<div id="divcont">';
+		echo '<p id="pcont">' . $row['contenido'] . '<p>';
+		echo '</div>';
+		echo '</section>';
+		
+	}
+
+	function noticias_izquierda(){
+		echo '<section id="secnoticia2">';
+		echo '<div id="divmas">';
+		echo '<p>MÁS EN NOTICIAS</p>';
+		echo '</div>';
+		echo '<table class="tabla3">';
+	
+		for ($i=0; $i <= 4; $i++) { 
+			$row=mysqli_fetch_array($this->Consulta_ID);
+			echo "<tr>";
+				echo '<td class="col_contenido"> <a class="col_titulo" href="noticia.php?variable_id='.$row['idNoticia'].'">'. $row['titulo']. "</a></td>";
+				echo "<td>". '<img src="'. $row['imagen'] . '" width="100px" />' ."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+		
+		echo '</section>';
+	}
+
+	/*Funcion para presentar las tres ultimas noticias*/
+
+	function tres_noticias(){
+		echo '<section class="noticias">';
+		echo '<a name="notices"></a>';
+		echo '<h2>Noticias</h2>';
+		for ($i=0; $i < 3; $i++) { 
+			$row=mysqli_fetch_array($this->Consulta_ID);
+			echo '<section class="noticiadetalle">';
+			echo '<img src="administrator/adm_notices/' .$row['imagen']. '">';
+			echo '<a href="noticia.php?variable_id='.$row['idNoticia'].'" target="_blank">'.$row['titulo'].'</a>';
+			echo '<p>'.$row['descripcion'].'</p>';
+			echo '</section>';
+		}
+		
+		echo '<br><br>';
+		echo '<h3><a href="modules/noticias.php">Mas información</a></h3>';
+		echo '</section>';
 	}
 }
 ?>

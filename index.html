@@ -20,7 +20,7 @@
 		<nav>
 			<a href="" class="menuinicio">Home</a>
 			<a href="#databases">Aves</a>
-			<a href="#databases">Noticias</a>
+			<a href="#notices">Noticias</a>
 			<a href="#service">Servicios</a>
 			<a href="#type">Lugares del parque</a>
 			<a href="#contacts" >Personal encargado</a>
@@ -69,6 +69,18 @@
 		<a name="databases"></a>
 		<h2>Database</h2>
 	</section>
+
+	<!--?php
+		include("dll/config.php");
+		include("dll/class_mysqli.php");
+		$miconexion = new clase_mysqli;
+		error_reporting(E_ALL ^ E_NOTICE);
+		$miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
+		$miconexion->consulta("Select * from noticia ORDER BY fecha DESC");
+
+		echo $miconexion->tres_noticias();
+	?-->
+
 	<section class="tipos">
 		<a name="type"></a>
 		<h2>Type of Birds</h2>
