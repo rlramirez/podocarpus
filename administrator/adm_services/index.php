@@ -4,7 +4,7 @@
 <main>
 	
 	<?php
-		$miconexion->consulta("select * from servicios");
+		$miconexion->consulta("select * from usuarios");
 		$miconexion->verconsulta();
 	?>
 </main>

@@ -1,0 +1,7 @@
+.principal { text-align: left; }
+
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

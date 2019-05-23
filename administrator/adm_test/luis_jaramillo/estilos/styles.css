@@ -1,0 +1,104 @@
+.principal {
+    background: #2196F3;
+
+}
+.ingresar{
+    position: absolute;    
+}
+
+.area {
+    background: #f8f8f8;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.titulo {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background: #1976D2;
+    padding: 2px;
+    width: 39.5%;
+    margin-left: 40%;
+    color: white;
+}
+
+.titulo2 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background: #1976D2;
+    padding: 2px;
+    width: 100%;
+    margin-top: 2%;
+    color: white;
+}
+
+
+.tabla {
+
+    padding-left: 40%;
+}
+
+
+.tabla {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla td,
+.tabla th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.tabla th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #03A9F4;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* ------------------- tabla 1 ------------------*/
+
+.tabla1,
+.tabla2 {
+
+    padding-left: 40%;
+}
+
+
+.tabla1,
+.tabla2 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla1 td,
+.tabla1 th,
+.tabla2 td,
+.tabla2 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabla1 tr:nth-child(even),
+.tabla2 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.tabla1 th,
+.tabla2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #03A9F4;
+    color: white;
+    text-transform: uppercase;
+}

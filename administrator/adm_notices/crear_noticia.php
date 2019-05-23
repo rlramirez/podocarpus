@@ -84,7 +84,7 @@
 			if ($Titulo==null) {
 
 			}else{
-				$resultado_noticia = $miconexion->insertar("Insert into noticia(idNoticia, titulo, fecha, autor, imagen, descripcion, contenido, idCategoria) VALUES (0, '$Titulo', '$fecha', '$Autor', '$Imagen', '$Entradilla', '$Contenido', $idCategoria)");
+				$resultado_noticia = $miconexion->insertar_villavicencio("Insert into noticia(idNoticia, titulo, fecha, autor, imagen, descripcion, contenido, idCategoria) VALUES (0, '$Titulo', '$fecha', '$Autor', '$Imagen', '$Entradilla', '$Contenido', $idCategoria)");
 				if ($resultado_noticia == 0) {
 					echo ' <script language="javascript">alert("Error: no se pudo guardar");</script> ';
 				}
@@ -119,7 +119,7 @@
 				if ($Categoria==null) {
 
 				}else{
-					$resultado = $miconexion->insertar("Insert into categoria(idCategoria, categoria) VALUES (0, '$Categoria')");
+					$resultado = $miconexion->insertar_villavicencio("Insert into categoria(idCategoria, categoria) VALUES (0, '$Categoria')");
 					if ($resultado == 0) {
 						echo ' <script language="javascript">alert("Error: no se pudo guardar");</script> ';
 					}

@@ -13,7 +13,12 @@ include("security/security.php");
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="<?php echo $site_url;?>/administrator/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $site_url;?>/administrator/adm_birds/adm_birds_css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $site_url;?>/administrator/adm_birds/adm_birds_css/fontello.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $site_url;?>/administrator/adm_test/juan_pachar/css/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 <body>
 	<header>
@@ -25,13 +30,26 @@ include("security/security.php");
 		</nav>
 	</header>
 	<nav class="mainmenu">
+<<<<<<< HEAD
 		<a href="../">Dashboard</a>
 		<a href="../adm_birds/index.php">Aves</a>
 		<a href="../adm_notices/index.php">Noticias</a>
 		<a href="../adm_services/index.php">Servicios</a>
 		<a href="">Lugares</a>
+=======
+		<a href="<?php echo $site_url; ?>/administrator/">Dashboard</a>
+		<a href="<?php echo $site_url; ?>/administrator/adm_birds/index.php">Aves</a>
+		<a href="">Noticias</a>
+		<a href="">Servicios</a>
+		<a href="../adm_lugares/index.php">Lugares</a>
+>>>>>>> 041167ca255354af9d7fca91e03001c02e559bd6
 		<a href="">Personal</a>
-		<a href="">Visitas</a>
+		<a href="../adm_visitas/index.php">Visitas</a>
 		<a href="">Sensores</a>
+<<<<<<< HEAD
 		<a href="../adm_activities/index.php">Actividades</a>
+=======
+		<a href="<?php echo $site_url; ?>/administrator/adm_activities/index.php">Actividades</a>
+		<a href="<?php echo $site_url; ?>/administrator/adm_test/index.php" >Examenes</a>
+>>>>>>> 041167ca255354af9d7fca91e03001c02e559bd6
 	</nav>

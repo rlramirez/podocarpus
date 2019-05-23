@@ -7,10 +7,11 @@
 	<meta name="keywords" charset="aves, ecuador, turismo, loja, bird">
 	<meta name="author" content="UTPL by @rlramirez">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="  crossorigin=""></script>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 
 </head>
 <body>
@@ -43,24 +44,31 @@
 			</form>
 		</div>
 	</div>
-<main>
-	<section class="servicios">
-		<a name="service"></a>
-		<h2>Servicios</h2>
-		<section class="serviciodetalle">
-			<img src="images/service1.jpg">
-			<h3>Recoleccion de datos</h3>
-			<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
+	<main>
+		<section class="servicios">
+			<a name="service"></a>
+			<h2>Servicios</h2>
+			<section class="serviciodetalle">
+				<img src="images/service1.jpg">
+				<h3>Recoleccion de datos</h3>
+				<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
+			</section>
+			<section class="serviciodetalle">
+				<img src="images/service2.jpg">
+				<h3>Recoleccion de datos</h3>
+				<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
+			</section>
+			<section class="serviciodetalle">
+				<img src="images/service3.jpg">
+				<h3>Recoleccion de datos</h3>
+				<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
+			</section>
+			<br><br>
+				<h3><a href="">Mas información</a></h3>
 		</section>
-		<section class="serviciodetalle">
-			<img src="images/service2.jpg">
-			<h3>Recoleccion de datos</h3>
-			<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
-		</section>
-		<section class="serviciodetalle">
-			<img src="images/service3.jpg">
-			<h3>Recoleccion de datos</h3>
-			<p>Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich</p>
+		<section class="lugares">
+			<h2>Lugares</h2>
+			<div id="mapid" style="width: 100%; height: 450px;"></div>
 		</section>
 		<br><br>
 			<h3><a href="">Mas información</a></h3>
@@ -87,24 +95,36 @@
 		<section class="tipodetalle">
 			<img src="images/service3.jpg">
 			<h3>Recoleccion de datos</h3>
+
+		<section class="database">
+			<a name="databases"></a>
+			<h2>Database</h2>
 		</section>
-		<section class="tipodetalle">
-			<img src="images/service2.jpg">
-			<h3>Recoleccion de datos</h3>
+		<section class="tipos">
+			<a name="type"></a>
+			<h2>Type of Birds</h2>
+			<section class="tipodetalle">
+				<img src="images/service3.jpg">
+				<h3>Recoleccion de datos</h3>
+			</section>
+			<section class="tipodetalle">
+				<img src="images/service2.jpg">
+				<h3>Recoleccion de datos</h3>
+			</section>
+			<section class="tipodetalle">
+				<img src="images/service1.jpg">
+				<h3>Recoleccion de datos</h3>
+			</section>
 		</section>
-		<section class="tipodetalle">
-			<img src="images/service1.jpg">
-			<h3>Recoleccion de datos</h3>
+		<section class="contactos">
+			<a name="contacts"></a>
+			<h2>Contacts</h2>
 		</section>
-	</section>
-	<section class="contactos">
-		<a name="contacts"></a>
-		<h2>Contacts</h2>
-	</section>
-</main>
-<footer>
-	<h6>Creative Commons by @Ingeniería Web</h6>
-</footer>
-<script src="js/anime.js"></script>
+	</main>
+	<footer>
+		<h6>Creative Commons by @Ingeniería Web</h6>
+	</footer>
+	<script src="js/app.js"></script>
+	<script src="js/anime.js"></script>
 </body>
 </html>

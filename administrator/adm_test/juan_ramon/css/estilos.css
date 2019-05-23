@@ -1,0 +1,10 @@
+input{
+	padding: 5px;
+}
+#formulario_dato{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 2px 2px;
+	padding: 25px;
+	margin: 25px
+}

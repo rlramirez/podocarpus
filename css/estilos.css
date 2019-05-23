@@ -59,11 +59,13 @@ header{
 	position:relative;
 	top:1px;
 }
+
+
 /* -------------------------------------------------- */
 /*                        POPUP                       */
 /* -------------------------------------------------- */
 .overlay{
-	background: rgba(0,0,0,.3);
+	background: rgba(0,0,0,.8);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -254,7 +256,10 @@ h2{
 	text-transform: uppercase;
 	font-family: 'Josefin Slab';
 }
-.servicios, .database, .tipos, .contactos, .noticias{
+
+
+.servicios, .lugares, .database, .tipos, .contactos{
+
 	padding: 14em 1em;
 }
 .serviciodetalle, .tipodetalle, .noticiadetalle{
