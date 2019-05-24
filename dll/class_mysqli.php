@@ -557,5 +557,29 @@ class clase_mysqli{
 		}
 
 	}
+
+	function verconsulta_avescrud(){
+		echo "<table class='table_birds'>";
+		echo "<tr>";
+        echo  "<th class='t1'>ID</th>";
+        echo  "<th>Nombre</th>";
+        echo  "<th>Nombre Científico</th>";
+		echo  "<th>Habitat</th>";
+		echo  "<th>Acciones</th>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				echo "<td>".$row[$i]."</td>";
+			}
+			echo "<td><div class='acciones'>
+            <div class='btn_ver'><a href='birds_read.php?id=$row[0]'><i class='icon-ver'></i></a></div>
+            <div class='btn_editar'><a href='birds_update.php?id=$row[0]'><i class='icon-mod'></i></a></div>
+            <div  class='btn_eliminar'><a href='birds_delete.php?id=$row[0]'><i class='icon-eli'></i></a></div>
+            </div></td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
 }
 ?>

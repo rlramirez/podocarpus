@@ -567,6 +567,56 @@ ALTER TABLE `yoderaguirre`
 --
 ALTER TABLE `yoderaguirre`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `aves`
+--
+
+CREATE TABLE `aves` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombre_c` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `descripcion` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `habitat` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `imagen` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `aves`
+--
+
+INSERT INTO `aves` (`id`, `nombre`, `nombre_c`, `descripcion`, `habitat`, `imagen`) VALUES
+(1, 'Ãguila', 'Aquila chrysaetos', 'El Ã¡guila real se adapta fÃ¡cilmente, por esta razÃ³n hoy dÃ­a estÃ¡ presente en practicamente todos los continentes especificamente muy cerca de las zonas montaÃ±osas desde las que pueden ver muy bien a sus presas y estar a salvo del contacto humano.', 'Zonas Ã¡ridas, semiÃ¡ridas y montaÃ±osas con bosques templados de pino-encino, conÃ­fe- ras, de encino y matorral espinoso', 'imagenes/aguila.jpg'),
+(2, 'Colibri', 'Trochilidae', 'Generalmente conocidos como ColibrÃ­s o colibrÃ­es, picaflores o chupamirtos, los troquilinos (Trochilinae) son un subfamilia de aves con patas pequeÃ±as llamadas apodiformes, pertenecientes a la familia Trochilidae. Son las aves mÃ¡s pequeÃ±as del mundo.', 'Viven en zonas con climas templados y tropicales, se ha descubierto que algunos viven en desiertos, costas, bosques, praderas y montaÃ±as.', 'imagenes/colibri.jpg'),
+(3, 'BÃºho Real', 'Bubo bubo', 'Ave estrigiforme de gran tamaÃ±o y fuerza muy comÃºn en el noreste de Europa, abarcando tambiÃ©n la zona del MediterrÃ¡neo, la PenÃ­nsula IbÃ©rica, Asia y Ãfrica. El nombre se le asignÃ³ por los sonidos que emite, ademÃ¡s que desde la Edad Media se le conocÃ­a como Bubo. Algunos autores consideran que existen hasta 20 subespecies del BÃºho Real.', 'Pueden vivir en los troncos de los Ã¡rboles y en las copas de los establos, otros viven en arbustos y matorrales', 'imagenes/buho-real.jpg');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `aves`
+--
+ALTER TABLE `aves`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `aves`
+--
+ALTER TABLE `aves`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
