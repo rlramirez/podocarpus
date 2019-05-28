@@ -26,6 +26,16 @@ include("security/security.php");
 	</header>
 	<nav class="mainmenu">
 		<a href="dashboard.php">Dashboard</a>
+<<<<<<< HEAD
+		<a href="adm_birds/index.php">Aves</a>
+		<a href="adm_notices/index.php">Noticias</a>
+		<a href="adm_services/index.php">Servicios</a>
+		<a href="">Lugares</a>
+		<a href="">Personal</a>
+		<a href="adm_visitas/index.php">Visitas</a>
+		<a href="">Sensores</a>
+		<a href="">Actividades</a>
+=======
 		<a href="./adm_birds/index.php">Aves</a>
 		<a href="">Noticias</a>
 		<a href="./adm_services/index.php">Servicios</a>
@@ -35,6 +45,7 @@ include("security/security.php");
 		<a href="./adm_activities/adm_sensores.php">Sensores</a>
 		<a href="./adm_activities/index.php">Actividades</a>
 		<a href="./adm_test/index.php">Examenes</a>
+>>>>>>> 041167ca255354af9d7fca91e03001c02e559bd6
 	</nav>
 	<main>
 		<section class="box-dashboard c1" >
